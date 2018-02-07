@@ -1,1 +1,1 @@
-"# cgc2018" 
+# Crap Gaming Competition 2018 #
