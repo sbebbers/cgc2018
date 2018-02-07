@@ -1,19 +1,13 @@
 {
 	"titles":{
-		"home":			"Example FrameWork.php skeleton site",
-		"date-example": "Shows a date picker using HTML 5 and bespoke jQuery/JavaScript"
+		"home":			"Sinclair ZX Crap Gaming Competition 2018"
 	},
 	"descriptions":{
-		"home":			"The Skeleton",
-		"date-example":	"Example of how to develop a simple form in Framework.php"
+		"home":			"Welcome to the 2018 Crap Gaming Competition, supported by Retro Games Ltd"
 	},
 	"metaData":{
 		"default":{
-			"author":	"Shaun Bebbington",
-			"twitter":	"@YearOfCodes"
-		},
-		"date-example":{
-			"author":	"Shaun Bebbington",
+			"author":	"Shaun Bebbington, James Sabin",
 			"twitter":	"@YearOfCodes"
 		}
 	}

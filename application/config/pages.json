@@ -1,15 +1,14 @@
 {
 	"allowedSegments":{
-		"Home": 		"home",
-		"Date-Example":	"date-example"
+		"Home": 		"home"
 	},
 	"pageController":{
 		"home":			"HomeController",
 		"date-example":	"DateController"
 	},
 	"errorReporting":{
-		"0":			"http://framework.php.local",
-		"1":			"https://framework.php.local"
+		"0":			"http://cgc2018.local",
+		"1":			"https://cgc2018.local"
 	},
 	"allowedFileExts":{
 		"0":			"htm",
