@@ -1,10 +1,10 @@
 {
-	"baseURL": "http://framework.php.local",
+	"baseURL": "http://cgc2018.local",
 	"protocol": "http",
-	"cookieDomain": "framework.php.local",
+	"cookieDomain": "cgc2018.local",
 	"uriPath": "/",
 	"loadCoreController": true,
-	"version": "0.1.5-RC2",
+	"version": "1.0",
 	"rc": true,
 	"dev": true,
 	"mode": "test",
