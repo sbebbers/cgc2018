@@ -1,10 +1,21 @@
 {
 	"allowedSegments":{
-		"Home": 		"home"
+		"Home": 		"home",
+		"News":			"news",
+		"Entries":		"entries",
+		"Reviews":		"reviews",
+		"Challenges":	"challenges",
+		"Rules":		"rules",
+		"Results":		"results"
 	},
 	"pageController":{
-		"home":			"HomeController",
-		"date-example":	"DateController"
+		"Home": 		"HomeController",
+		"News":			"NewsController",
+		"Entries":		"EntriesController",
+		"Reviews":		"ReviewsController",
+		"Challenges":	"ChallengesController",
+		"Rules":		"RulesController",
+		"Results":		"ResultsController"
 	},
 	"errorReporting":{
 		"0":			"http://cgc2018.local",
