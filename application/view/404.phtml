@@ -2,10 +2,13 @@
 <html lang="en-gb">
     <head><?php require_once("{$this->partial['header']}"); ?></head>
     <body>
-    	<div id="content" class="container">
-			<h1><?php echo print_r(http_response_code(), 1); ?> Error</h1>
-			<h3>These are not the crap games that you are looking for</h3>
-		</div>
-		<?php require_once("{$this->partial['footer']}"); ?>
-	</body>
+        <div id="content" class="container">
+            <?php if(!empty($this->parital['navbar'])): ?>
+                <?php require_once("{$this->partial['navbar']}"); ?>
+            <?php endif; ?>
+            <h1><?php echo print_r(http_response_code(), 1); ?> Error</h1>
+            <h3>These are not the crap games that you are looking for</h3>
+        </div>
+        <?php require_once("{$this->partial['footer']}"); ?>
+    </body>
 </html>

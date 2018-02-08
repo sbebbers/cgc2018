@@ -67,6 +67,7 @@ class Core extends HtmlBuilder
         $this->partial      = array(
             'header'    => (file_exists(serverPath("/view/partial/header.phtml"))) ? serverPath("/view/partial/header.phtml") : '',
             'footer'    => (file_exists(serverPath("/view/partial/footer.phtml"))) ? serverPath("/view/partial/footer.phtml") : '',
+            'navbar'    => (file_exists(serverPath("/view/partial/navbar.phtml"))) ? serverPath("/view/partial/navbar.phtml") : '',
         );
     }
     
