@@ -20,7 +20,10 @@
     		->close("div");
     		$this->open("div", "rules", "container");
     		foreach($this->rules as $key => $data):
-    		
+    		    $this->p()->id("rule_{$key}")->closeElement()
+    		        ->span("{$key}")->text("{$key}.&nbsp;")->close("span")
+    		        ->text("{$data}")
+    		    ->close("p");
     		endforeach;
     		$this->close("div");
     		require_once("{$this->partial['footer']}");
