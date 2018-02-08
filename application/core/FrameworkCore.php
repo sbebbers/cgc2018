@@ -298,9 +298,9 @@ class Core extends HtmlBuilder
         if(in_array($this->segment, $this->allowedSegments) == false || !file_exists(serverPath("/view/{$this->uriPath}{$this->segment}.phtml"))){
             $this->title        = '404 error - page not found, please try again';
             $this->description  = 'There\'s a Skeleton in the Sandbox';
-            $this->setView(array(
+            $this->setView([
                 "_404Error" => 1
-            ));
+            ]);
             http_response_code(404);
             require_once(serverPath("/view/404.phtml"));
             exit;
@@ -315,9 +315,9 @@ class Core extends HtmlBuilder
             }
             
             foreach($this->pageController as $instance => $controller){
-                if($this->segment == $instance){
+                if($this->segment == strtolower($instance)){
                     require_once(serverPath("/controller/{$controller}.php"));
-                    $_instance                      = $this->lib->camelCaseFromDashes($instance);
+                    $_instance                      = strtolower($this->lib->camelCaseFromDashes($instance));
                     $this->controller->{$_instance} = new $controller();
                     
                     if($this->controller->{$_instance}->view instanceof stdClass){

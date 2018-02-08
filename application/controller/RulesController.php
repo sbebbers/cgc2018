@@ -31,9 +31,10 @@ class RulesController
     /**
      * @var stdClass $view
      */
-    public $view = new stdClass();
+    public $view;
     
     public function __construct(){
+        $this->view = new stdClass();
         $this->setPageView();
     }
     
@@ -65,7 +66,7 @@ class RulesController
     }
     
     /**
-     * Returns the strap line for the <h4> tag
+     * Returns the strap line for the <h3> tag
      * 
      * @author  sbebbington
      * @date    7 Feb 2018 22:54:20
