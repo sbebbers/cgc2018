@@ -317,7 +317,7 @@ class Core extends HtmlBuilder
             foreach($this->pageController as $instance => $controller){
                 if($this->segment == strtolower($instance)){
                     require_once(serverPath("/controller/{$controller}.php"));
-                    $_instance                      = strtolower($this->lib->camelCaseFromDashes($instance));
+                    $_instance                      = lcfirst($this->lib->camelCaseFromDashes($instance));
                     $this->controller->{$_instance} = new $controller();
                     
                     if($this->controller->{$_instance}->view instanceof stdClass){
