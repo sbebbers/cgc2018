@@ -17,9 +17,15 @@
     		$this->open("div", "content", "container")
     			->h(1, $this->header, "header")
     			->h(3, $this->subHeader, "sub_header")
-    			->text($this->content, true)
-    			->open("hr", '', null, true)
     		->close("div");
+    		$this->open("div", "rules", "container");
+    		foreach($this->rules as $key => $data):
+    		    $this->p()->id("rule_{$key}")->closeElement()
+    		        ->span("{$key}")->text("{$key}.&nbsp;")->close("span")
+    		        ->text("{$data}")
+    		    ->close("p");
+    		endforeach;
+    		$this->close("div");
     		require_once("{$this->partial['footer']}");
     	$this->close("body");
     ?>
