@@ -5,7 +5,7 @@ class ReviewsController
     /**
      * @var string $header
      */
-    protected $header = 'Crap Gaming Competition 2018 Reviews';
+    protected $header = 'Crap Games Competition 2018 Reviews';
     
     /**
      * @var string $subHeader

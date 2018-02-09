@@ -5,7 +5,7 @@ class NewsController
     /**
      * @var string $header
      */
-    protected $header = 'Crap Gaming Competition 2018 News';
+    protected $header = 'Crap Games Competition 2018 News';
     
     /**
      * @var string $subHeader
@@ -15,7 +15,7 @@ class NewsController
     /**
      * @var array $content
      */
-    protected $content = '<strong>The guy who</strong> <strike>once</strike> <strong>wrote</strong> <strike>a small and insignificant amount of content</strike> <strong>for</strong> <strike>the</strike> <strong>Your Sinclair</strong> <strike>tribute issue that was free with Retro Gamer</strike> <strong>magazine</strong> has launched THIS CRAP GAMING COMPETITION. Want to make some software for your favourite Sinclair 8 bit (or compatible clone)? DO YOUR WORST!!!!!1one';
+    protected $content = '<strong>The guy who</strong> <strike>once</strike> <strong>wrote</strong> <strike>a small and insignificant amount of content</strike> <strong>for</strong> <strike>the</strike> <strong>Your Sinclair</strong> <strike>tribute issue that was free with Retro Gamer</strike> <strong>magazine</strong> has launched THIS CRAP GAMES COMPETITION. Want to make some software for your favourite Sinclair 8 bit (or compatible clone)? DO YOUR WORST!!!!!1one';
     
     /**
      * @var stdClass $view

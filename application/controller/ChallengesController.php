@@ -5,7 +5,7 @@ class ChallengesController
     /**
      * @var string $header
      */
-    protected $header = 'Crap Gaming Competition 2018 Challenges';
+    protected $header = 'Crap Games Competition 2018 Challenges';
     
     /**
      * @var string $subHeader
