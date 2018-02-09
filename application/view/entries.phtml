@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-	<?php 
-    	$this->open("head");
-			require_once("{$this->partial['header']}");
-		$this->close("head");
-    	$this->open("body");
-    	   
-    	   if(!empty($this->flash->message)){
-    			$this->open("div", "flash", array("container", "flash"))
-    				->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
-    					->text($this->flash->message)
-    				->close("p")
-    			->close("div");
-    		}
-    		
-    		$this->open("div", "content", "container")
-    			->h(1, $this->header, "header")
-    			->h(3, $this->subHeader, "sub_header")
-    			->text($this->content, true)
-    			->open("hr", '', null, true)
-    		->close("div");
-    		require_once("{$this->partial['footer']}");
-    	$this->close("body");
-    ?>
+<?php 
+    $this->open("head");
+        require_once("{$this->partial['header']}");
+    $this->close("head");
+
+    $this->open("body");
+        $this->open("div", "content", "container");
+
+            if(!empty($this->partial['navbar'])):
+                require_once("{$this->partial['navbar']}");
+            endif;
+    
+            if(!empty($this->flash->message)):
+                $this->open("div", "flash", array("container", "flash"))
+                    ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
+                        ->text($this->flash->message)
+                    ->close("p")
+                ->close("div");
+            endif;
+
+            $this->h(1, $this->header, "header")
+            ->h(3, $this->subHeader, "sub_header")
+            ->p()->id("main_content")->closeElement()
+                ->text($this->content, true)
+            ->close("p")
+            ->open("hr", '', null, true)
+        
+        ->close("div");
+        require_once("{$this->partial['footer']}");
+    $this->close("body");
+?>
 </html>

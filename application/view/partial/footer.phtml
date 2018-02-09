@@ -1,16 +1,16 @@
 <footer id="footer" class="container">
-	<div class="col-xs-12 clearfix">
-		<p><small class="text-centre clearfix">Built with <a href="https://github.com/sbebbers/FrameWork.php#frameworkphp" target="_blank">FrameWork.php</a> &copy; 2016 - <?php echo date('Y'); ?> Donkeysoft</small></p>
-	</div>
-	<script type="text/javascript" src="<?php echo $this->host; ?>/js/scripts.js"></script>
-	<?php if(getConfig('mode') == "test"): ?>
-		<?php
+    <div class="col-xs-12 clearfix">
+        <p><small class="text-centre clearfix">Built with <a href="https://github.com/sbebbers/FrameWork.php#frameworkphp" target="_blank">FrameWork.php</a> &copy; 2016 - <?php echo date('Y'); ?> Donkeysoft</small></p>
+    </div>
+    <script type="text/javascript" src="<?php echo $this->host; ?>/js/scripts.js"></script>
+    <?php if(getConfig('mode') == "test"): ?>
+        <?php
             $this->lib->debug(
                 array(
                     'version'           => getConfig('version'),
                     'releaseCandidate'  => (getConfig('rc') === true) ? "true" : "false"
                 )
             );
-		?>
-	<?php endif; ?>
+        ?>
+    <?php endif; ?>
 </footer>

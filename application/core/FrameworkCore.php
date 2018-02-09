@@ -67,6 +67,7 @@ class Core extends HtmlBuilder
         $this->partial      = array(
             'header'    => (file_exists(serverPath("/view/partial/header.phtml"))) ? serverPath("/view/partial/header.phtml") : '',
             'footer'    => (file_exists(serverPath("/view/partial/footer.phtml"))) ? serverPath("/view/partial/footer.phtml") : '',
+            'navbar'    => (file_exists(serverPath("/view/partial/navbar.phtml"))) ? serverPath("/view/partial/navbar.phtml") : '',
         );
     }
     
@@ -317,7 +318,7 @@ class Core extends HtmlBuilder
             foreach($this->pageController as $instance => $controller){
                 if($this->segment == strtolower($instance)){
                     require_once(serverPath("/controller/{$controller}.php"));
-                    $_instance                      = strtolower($this->lib->camelCaseFromDashes($instance));
+                    $_instance                      = lcfirst($this->lib->camelCaseFromDashes($instance));
                     $this->controller->{$_instance} = new $controller();
                     
                     if($this->controller->{$_instance}->view instanceof stdClass){
