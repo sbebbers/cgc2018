@@ -21,11 +21,18 @@
         endif;
 
         $this->h(1, $this->header, "header")
-        ->h(3, $this->subHeader, "sub_header")
-        ->p()->id("main_content")->closeElement()
-            ->text($this->content, true)
-        ->close("p")
-        ->open("hr", '', null, true)
+        ->h(3, $this->subHeader, "sub_header");
+        
+        foreach($this->content as $key => $data):
+            $this->h(4, "{$key}.&nbsp;{$data['name']}", $key, $data['class']);
+            foreach($data['description'] as $content):
+                $this->p()->closeElement()
+                    ->text($content, true)
+                ->close("p");
+            endforeach;
+        endforeach;
+        
+        $this->open("hr", '', null, true)
     ->close("div");
     require_once("{$this->partial['footer']}");
 ?></body>
