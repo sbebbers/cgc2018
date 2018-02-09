@@ -4,30 +4,29 @@
     $this->open("head");
         require_once("{$this->partial['header']}");
     $this->close("head");
+?><body class="paper-white ink-bright-black">
+<?php
+    $this->open("div", "content", "container");
 
-    $this->open("body");
-        $this->open("div", "content", "container");
+        if(!empty($this->partial['navbar'])):
+            require_once("{$this->partial['navbar']}");
+        endif;
 
-            if(!empty($this->partial['navbar'])):
-                require_once("{$this->partial['navbar']}");
-            endif;
-    
-            if(!empty($this->flash->message)):
-                $this->open("div", "flash", array("container", "flash"))
-                    ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
-                        ->text($this->flash->message)
-                    ->close("p")
-                ->close("div");
-            endif;
+        if(!empty($this->flash->message)):
+            $this->open("div", "flash", array("container", "flash"))
+                ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
+                    ->text($this->flash->message)
+                ->close("p")
+            ->close("div");
+        endif;
 
-            $this->h(1, $this->header, "header")
-            ->h(3, $this->subHeader, "sub_header");
-            foreach($this->content as $data):
-                $this->p()->closeElement()->text($data, true)->close("p");
-            endforeach;
-            $this->open("hr", '', null, true)
-        ->close("div");
-        require_once("{$this->partial['footer']}");
-    $this->close("body");
-?>
+        $this->h(1, $this->header, "header")
+        ->h(3, $this->subHeader, "sub_header");
+        foreach($this->content as $data):
+            $this->p()->closeElement()->text($data, true)->close("p");
+        endforeach;
+        $this->open("hr", '', null, true)
+    ->close("div");
+    require_once("{$this->partial['footer']}");
+?></body>
 </html>

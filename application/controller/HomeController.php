@@ -18,7 +18,7 @@ class HomeController extends ControllerCore
      */
     protected $content = array(
         'Have you ever wanted to make a game for your favourite Sinclair 8-bit computer? Now is your chance, and we want you to DO YOUR WORST!',
-        'See our <a href="/rules" target="_blank" rel="nofollow">rules and regulations</a> before you submit your entry. If these are agreeable send your crap to <a href="mailto:shaun@square-circle.ZXco.uk" rel="nofollow">shaun@square-circle.co.uk</a> for evaluation!',
+        'See our <a href="/rules" target="_blank" class="ink-bright-blue" rel="nofollow">rules and regulations</a> before you submit your entry. If these are agreeable send your crap to <a href="mailto:shaun@square-circle.ZX.co.uk" class="ink-bright-blue" rel="nofollow">shaun@square-circle.co.uk</a> for evaluation!',
     );
     
     public function __construct(){
