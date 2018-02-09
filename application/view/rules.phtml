@@ -4,6 +4,7 @@
     $this->open("head");
         require_once("{$this->partial['header']}");
     $this->close("head");
+    
     $this->open("body");
         $this->open("div", "content", "container");
 
@@ -20,18 +21,16 @@
             endif;
 
             $this->h(1, $this->header, "header")
-                ->h(3, $this->subHeader, "sub_header")
+            ->h(3, $this->subHeader, "sub_header")
+            ->open("div", "rules", "container");
+                foreach($this->rules as $key => $data):
+                    $this->p()->id("rule_{$key}")->closeElement()
+                        ->span("{$key}")->text("<strong>{$key}.&nbsp;</strong>")->close("span")
+                        ->text("{$data}")
+                    ->close("p");
+                endforeach;
+                $this->open("hr", '', null, true)
             ->close("div");
-
-            $this->open("div", "rules", "container");
-            foreach($this->rules as $key => $data):
-                $this->p()->id("rule_{$key}")->closeElement()
-                    ->span("{$key}")->text("{$key}.&nbsp;")->close("span")
-                    ->text("{$data}")
-                ->close("p");
-            endforeach;
-
-        $this->close("div");
         require_once("{$this->partial['footer']}");
     $this->close("body");
 ?>
