@@ -5,7 +5,7 @@ class EntriesController
     /**
      * @var string $header
      */
-    protected $header = 'Crap Gaming Competition 2018 Entries';
+    protected $header = 'Crap Games Competition 2018 Entries';
     
     /**
      * @var string $subHeader
