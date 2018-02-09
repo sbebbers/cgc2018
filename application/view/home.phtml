@@ -20,11 +20,12 @@
                 ->close("div");
             endif;
 
-            $this->h(1, "Crap Gaming Competition 2018", "header")
-            ->h(3, "Welcome to the 2018 Crap Graming Competition", "sub_header")
-            ->p()->closeElement()->text("Have you ever wanted to make a game for your favourite Sinclair 8-bit computer? Now is your chance, and we want you to DO YOUR WORST!", true)->close("p")
-            ->p()->closeElement()->text("See our <a href=\"{$this->host}/rules\" target=\"_blank\" rel=\"nofollow\">rules and regulations</a> before you submit your entry. If these are agreeable send your crap to <a href=\"mailto:shaun@square-circle.ZXco.uk\" rel=\"nofollow\">shaun@square-circle.co.uk</a> for evaluation!", true)->close("p")
-            ->open("hr", '', null, true)
+            $this->h(1, $this->header, "header")
+            ->h(3, $this->subHeader, "sub_header");
+            foreach($this->content as $data):
+                $this->p()->closeElement()->text($data, true)->close("p");
+            endforeach;
+            $this->open("hr", '', null, true)
         ->close("div");
         require_once("{$this->partial['footer']}");
     $this->close("body");
