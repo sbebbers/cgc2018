@@ -6,12 +6,12 @@ class HomeController extends ControllerCore
     /**
      * @var string $header
      */
-    protected $header = 'Crap Gaming Competition 2018';
+    protected $header = 'Crap Games Competition 2018';
     
     /**
      * @var string $subHeader
      */
-    protected $subHeader = 'Welcome to the 2018 Crap Graming Competition';
+    protected $subHeader = 'Welcome to the 2018 Crap Games Competition';
     
     /**
      * @var array $content
