@@ -5,7 +5,7 @@ class ResultsController
     /**
      * @var string $header
      */
-    protected $header = 'Crap Gaming Competition 2018 Results (add this page last)';
+    protected $header = 'Crap Games Competition 2018 Results (add this page last)';
     
     /**
      * @var string $subHeader
