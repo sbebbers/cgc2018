@@ -22,11 +22,15 @@
 
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header")
-        ->p()->id("main_content")->closeElement()
-            ->text($this->content, true)
-        ->close("p")
-        ->open("hr", '', null, true)
-    ->close("div");
+        ->open("div", "news", "container");
+            foreach($this->content as $key => $newsItem):
+                $this->h(4, $newsItem['title'], $key, $newsItem['class']);
+                foreach($newsItem['description'] as $text):
+                    $this->p()->id("news-item-{$key}")->closeElement()->text($text)->close("p");
+                endforeach;
+            endforeach;
+        $this->open("hr", '', null, true)
+        ->close("div");
     require_once("{$this->partial['footer']}");
 ?></body>
 </html>

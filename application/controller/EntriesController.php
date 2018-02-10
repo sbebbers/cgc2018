@@ -15,7 +15,21 @@ class EntriesController
     /**
      * @var array $content
      */
-    protected $content = 'Entries will appear here shortly';
+    protected $content = array(
+        'I' => array(
+            'title' => "Winter Neurobics Pentathalon",
+            'format' => "ZX Spectrum (48K or more recommended, 16K compatible)",
+            'screen-shot' => array(
+                'location' => "/img/",
+                'file-name' => "winterneurobics.png",
+                'alt' => "Kweepa's 2018 Winter Olympics tie-in",
+                'class' => "img-responsive",
+                'width' => '128',
+                'height' => '96'
+            ),
+            'download' => '/download/winterneurobics.zip'
+        ),
+    );
     
     /**
      * @var stdClass $view
