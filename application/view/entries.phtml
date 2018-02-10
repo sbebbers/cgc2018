@@ -4,31 +4,42 @@
     $this->open("head");
         require_once("{$this->partial['header']}");
     $this->close("head");
+?><body class="paper-white ink-bright-black">
+<?php
+    $this->open("div", "content", "container");
 
-    $this->open("body");
-        $this->open("div", "content", "container");
+        if(!empty($this->partial['navbar'])):
+            require_once("{$this->partial['navbar']}");
+        endif;
 
-            if(!empty($this->partial['navbar'])):
-                require_once("{$this->partial['navbar']}");
-            endif;
-    
-            if(!empty($this->flash->message)):
-                $this->open("div", "flash", array("container", "flash"))
-                    ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
-                        ->text($this->flash->message)
-                    ->close("p")
-                ->close("div");
-            endif;
+        if(!empty($this->flash->message)):
+            $this->open("div", "flash", array("container", "flash"))
+                ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
+                    ->text($this->flash->message)
+                ->close("p")
+            ->close("div");
+        endif;
 
-            $this->h(1, $this->header, "header")
-            ->h(3, $this->subHeader, "sub_header")
-            ->p()->id("main_content")->closeElement()
-                ->text($this->content, true)
-            ->close("p")
-            ->open("hr", '', null, true)
-        
-        ->close("div");
-        require_once("{$this->partial['footer']}");
-    $this->close("body");
-?>
+        $this->h(1, $this->header, "header")
+        ->h(3, $this->subHeader, "sub_header");
+        foreach($this->content as $key => $entry):
+            $this->h(4, "{$key}.&nbsp;{$entry['title']}");
+            $this->p()->closeElement()->text("<span class=\"ink-bright-red\">Format details:</span> {$entry['format']}")->close("p");
+            $this->p()->addClass("col-xs-12 col-md-4")->closeElement()
+                ->text("<a href=\"{$entry['download']}\" rel=\"nofollow\">")
+                    ->img(
+                        "",
+                        "{$entry['screen-shot']['location']}{$entry['screen-shot']['file-name']}",
+                        "{$entry['screen-shot']['width']}",
+                        "{$entry['screen-shot']['height']}",
+                        "{$entry['screen-shot']['alt']}",
+                        "{$entry['screen-shot']['class']}"
+                    )
+                ->close("a");
+            $this->close("p");
+        endforeach;
+        $this->open("hr", '', null, true)
+    ->close("div");
+    require_once("{$this->partial['footer']}");
+?></body>
 </html>

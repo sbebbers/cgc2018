@@ -5,12 +5,12 @@ class ResultsController
     /**
      * @var string $header
      */
-    protected $header = 'Crap Games Competition 2018 Results (add this page last)';
+    protected $header = 'Crap Games Competition 2018 Results <strong class="ink-bright-red">(add this page last)</strong>';
     
     /**
      * @var string $subHeader
      */
-    protected $subHeader = 'Note to developer: the results will be the last page to make so don\'t put this live!';
+    protected $subHeader = '<strong class="ink-bright-red">Note to developer:</strong> The results will be the last page to make so <strong class="ink-bright-red">don\'t</strong> put this live!';
     
     /**
      * @var array $content

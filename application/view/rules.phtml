@@ -4,34 +4,33 @@
     $this->open("head");
         require_once("{$this->partial['header']}");
     $this->close("head");
-    
-    $this->open("body");
-        $this->open("div", "content", "container");
+?><body class="paper-white ink-bright-black">
+<?php
+    $this->open("div", "content", "container");
 
-            if(!empty($this->partial['navbar'])):
-                require_once("{$this->partial['navbar']}");
-            endif;
+        if(!empty($this->partial['navbar'])):
+            require_once("{$this->partial['navbar']}");
+        endif;
 
-            if(!empty($this->flash->message)):
-                $this->open("div", "flash", array("container", "flash"))
-                    ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
-                        ->text($this->flash->message)
-                    ->close("p")
-                ->close("div");
-            endif;
-
-            $this->h(1, $this->header, "header")
-            ->h(3, $this->subHeader, "sub_header")
-            ->open("div", "rules", "container");
-                foreach($this->rules as $key => $data):
-                    $this->p()->id("rule_{$key}")->closeElement()
-                        ->span("{$key}")->text("<strong>{$key}.&nbsp;</strong>")->close("span")
-                        ->text("{$data}")
-                    ->close("p");
-                endforeach;
-                $this->open("hr", '', null, true)
+        if(!empty($this->flash->message)):
+            $this->open("div", "flash", array("container", "flash"))
+                ->p()->id("flash-message")->addClass(array("flash-bg", "green"))->closeElement()
+                    ->text($this->flash->message)
+                ->close("p")
             ->close("div");
-        require_once("{$this->partial['footer']}");
-    $this->close("body");
-?>
+        endif;
+
+        $this->h(1, $this->header, "header")
+        ->h(3, $this->subHeader, "sub_header")
+        ->open("div", "rules", "container");
+            foreach($this->rules as $key => $data):
+                $this->p()->id("rule_{$key}")->closeElement()
+                    ->span("{$key}")->text("<strong>{$key}.&nbsp;</strong>")->close("span")
+                    ->text("{$data}")
+                ->close("p");
+            endforeach;
+            $this->open("hr", '', null, true)
+        ->close("div");
+    require_once("{$this->partial['footer']}");
+?></body>
 </html>
