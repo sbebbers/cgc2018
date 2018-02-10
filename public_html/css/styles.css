@@ -94,7 +94,7 @@
 	.col-smd-11-offset{margin-left:91.6666666667%}
 	.nav-items > li{padding:16px 12px}
 }
-@media only screen and (min-width:524px){
+@media only screen and (min-width:700px){
 	.nav-items > li{padding:16px}
 }
 /* Assumes tablet view from 768px and above */
