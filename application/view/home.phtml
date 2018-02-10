@@ -21,14 +21,14 @@
                 ->close("div");
             endif;
 
-            $this->open("div", "home-content", array("col-xs-12", "col-md-9", "pull-left"));
+            $this->open("div", "home-content", array("col-xs-12", "col-md-8", "pull-left"));
                 $this->h(1, $this->header, "header")
                 ->h(3, $this->subHeader, "sub_header");
                 foreach($this->content as $data):
-                    $this->p()->closeElement()->text($data, true)->close("p");
+                    $this->p()->addClass("pad-right-8")->closeElement()->text($data, true)->close("p");
                 endforeach;
             $this->close("div");
-            $this->open("div", "twitter-content", array("twitter-box", "col-xs-12", "col-md-3", "pull-right"));
+            $this->open("div", "twitter-content", array("twitter-box", "col-xs-12", "col-md-4", "pull-right"));
                 $this->text('<a href="https://twitter.com/CSSCGC2018?ref_src=twsrc%5Etfw" data-width="98%" data-height="auto" data-link-color="#00f" class="twitter-timeline" rel="nofollow">Tweets by CSSCGC2018</a>');
             $this->close("div");
             $this->open("div", "", array("col-xs-12", "clearfix"))

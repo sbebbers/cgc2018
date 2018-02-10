@@ -67,6 +67,8 @@
 }
 @media only screen and (min-width:524px){
 	.nav-items > li{padding:12px 4px}
+	.nav-items > li:hover{background:#0ff;cursor:pointer}
+	.nav-items > li > a:hover{color:#fff}
 }
 @media only screen and (min-width:625px){
 	.col-smd-1{width:8.3333333334%}
@@ -121,11 +123,12 @@
 	.col-md-8-offset{margin-left:66.6666666667%}
 	.col-md-9-offset{margin-left:75%}
 	.col-md-10-offset{margin-left:83.3333333334%}
-	.col-md-11-offset{margin-left:91.6666666667%}
+	.col-md-11-offset{margin-left:91.6666666667%}1
 	.mobile{display:none}
 	.tablet{display:block}
 	.container{margin:0 auto;max-width:752px}
 	.nav-items > li{padding: 16px 24px}
+	.pad-right-8{padding-right:8px}
 }
 /* Assumes desktop view from 990px and above */
 @media only screen and (min-width:990px){
