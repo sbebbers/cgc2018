@@ -36,7 +36,7 @@
 	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{line-height:1em}
 	.navbar{position:relative;padding:8px 0;margin-top:16px}
 	.nav-items{display:inline;list-style-type:none;margin:0 auto;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-padding-start:0}
-	.nav-items > li{display:unset;list-style:none;padding:16px .9%;border:2px solid #f00}
+	.nav-items > li{display:unset;list-style:none;padding:2px;border:2px solid #f00;margin:8px;line-height:32px}
 	.twitter-box{margin:24px auto 8px}
 }
 @media only screen and (min-width:480px){
@@ -63,7 +63,10 @@
 	.col-sm-9-offset{margin-left:75%}
 	.col-sm-10-offset{margin-left:83.3333333334%}
 	.col-sm-11-offset{margin-left:91.6666666667%}
-	.nav-items > li{padding:16px 1.4%}
+	.nav-items > li{padding:12px 0;margin:0;line-height:0}
+}
+@media only screen and (min-width:524px){
+	.nav-items > li{padding:12px 4px}
 }
 @media only screen and (min-width:625px){
 	.col-smd-1{width:8.3333333334%}
@@ -89,7 +92,10 @@
 	.col-smd-9-offset{margin-left:75%}
 	.col-smd-10-offset{margin-left:83.3333333334%}
 	.col-smd-11-offset{margin-left:91.6666666667%}
-	.nav-items > li{padding:16px 1.7%}
+	.nav-items > li{padding:16px 12px}
+}
+@media only screen and (min-width:700px){
+	.nav-items > li{padding:16px}
 }
 /* Assumes tablet view from 768px and above */
 @media only screen and (min-width:768px){
@@ -119,7 +125,7 @@
 	.mobile{display:none}
 	.tablet{display:block}
 	.container{margin:0 auto;max-width:752px}
-	.nav-items > li {padding: 16px 2.4%}
+	.nav-items > li{padding: 16px 24px}
 }
 /* Assumes desktop view from 990px and above */
 @media only screen and (min-width:990px){
@@ -149,7 +155,7 @@
 	.mobile,.tablet{display:none}
 	.desktop{display:block}
 	.container{max-width:960px}
-	.nav-items > li{padding:16px 3.33%}
+	.nav-items > li{padding: 16px 32px}
 }
 @media only screen and (min-width:1200px){
 	.col-lg-1{width:8.3333333334%}
@@ -176,7 +182,7 @@
 	.col-lg-10-offset{margin-left:83.3333333334%}
 	.col-lg-11-offset{margin-left:91.6666666667%}
 	.container{max-width:1024px}
-	.nav-items > li{padding:16px 3.6%}
+	.nav-items > li{padding: 16px 40px}
 }
 @media only screen and (min-width:1600px){
 	.col-xl-1{width:8.3333333334%}
@@ -203,7 +209,7 @@
 	.col-xl-10-offset{margin-left:83.3333333334%}
 	.col-xl-11-offset{margin-left:91.6666666667%}
 	.container{max-width:1480px}
-	.nav-items > li{padding:16px 4.44%}
+	.nav-items > li{padding: 16px 44px}
 }
 .flash{color:#eee;font-weight:700;font-size:18px;line-height:20px}
 .flash-bg{padding:8px;border-radius:4px}
