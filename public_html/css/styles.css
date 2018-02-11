@@ -253,3 +253,7 @@
 .paper-yellow{background:#cc0}
 .paper-white{background:#ccc}
 a:hover,a:clicked,a:visited{cursor:pointer}
+.review-screen-shot{padding:0 16px 0 0;margin-top:0}
+.clapometer-box{border:2px solid #cc0;padding: 0px 8px 0px 8px}
+.clapometer-point,.clapometer-pointless{border:1px solid #000;font-weight:700;margin:0 4px 0px 4px}
+.clapometer-point{background:#000}
