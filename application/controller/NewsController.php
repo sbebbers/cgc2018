@@ -17,10 +17,26 @@ class NewsController
      */
     protected $content = array(
         array(
+            'title' => "Number Guesser",
+            'class' => "ink-bright-black",
+            'description' => array(
+                'As an example of what you can do in just 12 lines of the powerful <strong>ZX81 BASIC</strong>, I made <em>Number Guesser</em> to give all those Zeddy fans some inspiration.',
+                'If you like type-ins, see the <a href="https://groups.google.com/forum/#!topic/comp.sys.sinclair/2wbgULi8rVY" target="_blank" class="ink-bright-blue" rel="nofollow">Comp.Sys.Sinclair thread</a>, or it is available in .P format (for emulators and ZXPand users) from <a href="http://www.sinclairzxworld.com/viewtopic.php?f=5&t=2777" target="_blank" class="ink-bright-blue" rel="nofollow">Sinclair ZX World</a>, which includes a <strong>ZX80</strong> port, which is actually 13 lines of BASIC.',
+            ),
+        ),
+        array(
+            'title' => "Winter Neurobics Pentathalon update",
+            'class' => "ink-bright-blue",
+            'description' => array(
+                'Kweepa has updated his entry as it had something called a \'bug\' which required \'fixing\'.',
+                'There doesn\'t seem to be anything in the rules against this so a new version will be available on the \'Entries\' page shortly.',
+            ),
+        ),
+        array(
             'title' => "First Entry from Kweepa",
             'class' => "ink-bright-black",
             'description' => array(
-                'Kweepa has submitted Winter Neurobics Pentathalon for the <strong class="ink-bright-red">ZX Spectrum</strong>.',
+                'Kweepa has submitted <em>Winter Neurobics Pentathalon</em> for the <strong class="ink-bright-red">ZX Spectrum</strong>.',
                 'This game neatly ties in with the 2018 Winter Olympics, and is intended for machines with 48K of RAM or more, though 16K users are still supported with a text-only version. See our <a href="/entries" class="ink-bright-blue" rel="nofollow">entries</a> page to get this download.',
             ),
         ),

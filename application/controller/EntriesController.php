@@ -10,7 +10,7 @@ class EntriesController
     /**
      * @var string $subHeader
      */
-    protected $subHeader = 'And our latest entries are...';
+    protected $subHeader = 'Here are our entries so far - <span class="ink-bright-cyan">to download each listed, click on the relevant screen shot</span>';
     
     /**
      * @var array $content
@@ -22,12 +22,25 @@ class EntriesController
             'screen-shot' => array(
                 'location' => "/img/",
                 'file-name' => "winterneurobics.png",
-                'alt' => "Kweepa's 2018 Winter Olympics tie-in",
+                'alt' => "Kweepa's 2018 Winter [unofficial] Olympics tie-in",
                 'class' => "img-responsive",
                 'width' => '128',
                 'height' => '96'
             ),
             'download' => '/download/winterneurobics.zip'
+        ),
+        'II' => array(
+            'title' => "Winter Neurobics Pentathalon V1.1 ('Fixed' edition)",
+            'format' => "ZX Spectrum (48K or more recommended, 16K compatible)",
+            'screen-shot' => array(
+                'location' => "/img/",
+                'file-name' => "winterneurobics.png",
+                'alt' => "'Fixed' version of Kweepa's 2018 [unofficial] Winter Olympics tie-in",
+                'class' => "img-responsive",
+                'width' => '128',
+                'height' => '96'
+            ),
+            'download' => '/download/winterneurobicsV1.1.zip'
         ),
     );
     
