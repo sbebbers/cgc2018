@@ -17,6 +17,20 @@ class NewsController
      */
     protected $content = array(
         array(
+            'title' => "Plumbers Don't Wear Ties!",
+            'class' => "ink-bright-black",
+            'description' => array(
+                '',
+            ),
+        ),
+        array(
+            'title' => "Fortress released",
+            'class' => "ink-bright-blue",
+            'description' => array(
+                '',
+            ),
+        ),
+        array(
             'title' => "Number Guesser",
             'class' => "ink-bright-black",
             'description' => array(
