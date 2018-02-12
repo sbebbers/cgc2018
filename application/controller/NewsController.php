@@ -20,14 +20,15 @@ class NewsController
             'title' => "Plumbers Don't Wear Ties!",
             'class' => "ink-bright-black",
             'description' => array(
-                '',
+                'PROSM Software is back with a remake of a Windows 3.1 game which is an interactive fiction type with a rather steamy plot line (oo-er missus) called <em>Plumbers Don\'t wear ties</em>.',
             ),
         ),
         array(
             'title' => "Fortress released",
             'class' => "ink-bright-blue",
             'description' => array(
-                '',
+                '<em>Fortress</em> (originally developed by ZX User Club Germany) has been recycled and re-factored thanks to Volker Bartheld.',
+                'This is a strategy board game-alike simulator for one or two players, which will work <strong class="ink-bright-red">16K ZX Speccy</strong>. Go get it.',
             ),
         ),
         array(
@@ -35,7 +36,7 @@ class NewsController
             'class' => "ink-bright-black",
             'description' => array(
                 'As an example of what you can do in just 12 lines of the powerful <strong>ZX81 BASIC</strong>, I made <em>Number Guesser</em> to give all those Zeddy fans some inspiration.',
-                'If you like type-ins, see the <a href="https://groups.google.com/forum/#!topic/comp.sys.sinclair/2wbgULi8rVY" target="_blank" class="ink-bright-blue" rel="nofollow">Comp.Sys.Sinclair thread</a>, or it is available in .P format (for emulators and ZXPand users) from <a href="http://www.sinclairzxworld.com/viewtopic.php?f=5&t=2777" target="_blank" class="ink-bright-blue" rel="nofollow">Sinclair ZX World</a>, which includes a <strong>ZX80</strong> port, which is actually 13 lines of BASIC.',
+                'If you like type-ins, see the <a href="https://groups.google.com/forum/#!topic/comp.sys.sinclair/2wbgULi8rVY" target="_blank" class="ink-bright-blue" rel="nofollow">Comp.Sys.Sinclair thread</a>, or it is available in .P format (for emulators and ZXPand users) from <a href="http://cgc.source.run/download/number-guesser.zip" class="ink-bright-blue" rel="nofollow">here</a>, which includes a <strong>ZX80</strong> port that is actually 13 lines of BASIC, so wouldn\'t qualify for the challenge (without a small amend to it anyway).',
             ),
         ),
         array(

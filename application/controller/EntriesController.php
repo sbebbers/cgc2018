@@ -25,9 +25,9 @@ class EntriesController
                 'alt' => "Kweepa's 2018 Winter [unofficial] Olympics tie-in",
                 'class' => "img-responsive",
                 'width' => '128',
-                'height' => '96'
+                'height' => '96',
             ),
-            'download' => '/download/winterneurobics.zip'
+            'download' => '/download/winterneurobics.zip',
         ),
         'II' => array(
             'title' => "Winter Neurobics Pentathalon V1.1 ('Fixed' edition)",
@@ -38,9 +38,9 @@ class EntriesController
                 'alt' => "'Fixed' version of Kweepa's 2018 [unofficial] Winter Olympics tie-in",
                 'class' => "img-responsive",
                 'width' => '128',
-                'height' => '96'
+                'height' => '96',
             ),
-            'download' => '/download/winterneurobicsV1.1.zip'
+            'download' => '/download/winterneurobicsV1.1.zip',
         ),
         'III' => array(
             'title' => "Fortress",
@@ -51,9 +51,9 @@ class EntriesController
                 'alt' => "Fortress, by ZX User Club Cooperation GmbH",
                 'class' => "img-responsive",
                 'width' => '128',
-                'height' => '96'
+                'height' => '96',
             ),
-            'download' => '/download/fortress.zip'
+            'download' => '/download/fortress.zip',
         ),
         'IV' => array(
             'title' => "Plumbers Don't Wear Ties",
@@ -64,9 +64,9 @@ class EntriesController
                 'alt' => "The Speccy conversion of Plumbers Don't Wear Ties, by PROSM Software",
                 'class' => "img-responsive",
                 'width' => '128',
-                'height' => '96'
+                'height' => '96',
             ),
-            'download' => '/download/plumbers.zip'
+            'download' => '/download/plumbers.zip',
         ),
     );
     
