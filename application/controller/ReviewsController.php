@@ -69,9 +69,9 @@ class ReviewsController
             'cgc-clapometer' => array(
                 'summary' => "Deffo a game for those brainy kids out there!",
                 'graphics' => 8,
-                'playability' => 8,
-                'addictiveness' => 7,
-                'total' => 7,
+                'playability' => 7,
+                'addictiveness' => 9,
+                'total' => 8,
                 'sundry' => array(
                     "Works on a 16K Speccy (Yay!)",
                     "One player mode is super-difficult (as the attacker)"
