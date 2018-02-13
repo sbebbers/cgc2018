@@ -1,3 +1,56 @@
+/* Global */
+.nav-items > li{
+    position:relative;
+}
+
+.nav-items > li .rainbow{
+    position: absolute;
+    top: -15px;
+    /* left: 0; */
+    right: -8px;
+    height: 15px;
+    width: 50px;
+    display: block;
+    content: '';
+    overflow: hidden;
+}
+
+.nav-items > li .rainbow ul{
+    margin-left: 0px;
+    padding-left: 0px;
+    display:flex;
+}
+
+.nav-items > li .rainbow .colour{
+    flex-grow: 1;
+    width: 100%;
+    height: 50px;
+    background-color: pink;
+    display: inline-block;
+    -ms-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    margin-top: -10px;
+    margin-left: 1px;
+    margin-right: -10px;
+}
+
+.nav-items > li .rainbow .colour.red{
+    background-color:red;
+}
+
+.nav-items > li .rainbow .colour.yellow{
+    background-color:yellow;
+}
+
+.nav-items > li .rainbow .colour.green{
+    background-color:green;
+}
+
+.nav-items > li .rainbow .colour.blue{
+    background-color:blue;
+}
+
 @media only screen and (min-width:0px){
 	.col-xs-1{width:8.3333333334%}
 	.col-xs-2{width:16.6666666667%}
@@ -35,8 +88,24 @@
 	.img-responsive{height:auto}
 	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{line-height:1em}
 	.navbar{position:relative;padding:8px 0;margin-top:16px}
-	.nav-items{display:inline;list-style-type:none;margin:0 auto;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-padding-start:0}
-	.nav-items > li{display:unset;list-style:none;padding:2px;border:2px solid #f00;margin:8px;line-height:32px}
+        
+	.nav-items{
+            display:inline;
+            list-style-type:none;
+            margin:0 auto;
+            -webkit-margin-before:0;
+            -webkit-margin-after:0;
+            -webkit-padding-start:0
+        }
+	.nav-items > li{
+            display:inline-block;
+            list-style:none;
+            padding:2px;
+            border:8px solid #000;
+            border-top: 15px solid #000;
+            margin:8px;
+            line-height:32px
+        }
 	.twitter-box{margin:24px auto 8px}
 }
 @media only screen and (min-width:480px){
@@ -127,7 +196,7 @@
 	.mobile{display:none}
 	.tablet{display:block}
 	.container{margin:0 auto;max-width:752px}
-	.nav-items > li{padding: 16px 24px}
+	.nav-items > li{padding: 24px 24px}
 	.pad-right-8{padding-right:8px}
 }
 /* Assumes desktop view from 990px and above */
@@ -185,7 +254,7 @@
 	.col-lg-10-offset{margin-left:83.3333333334%}
 	.col-lg-11-offset{margin-left:91.6666666667%}
 	.container{max-width:1024px}
-	.nav-items > li{padding: 16px 40px}
+	.nav-items > li{padding: 24px 40px}
 }
 @media only screen and (min-width:1600px){
 	.col-xl-1{width:8.3333333334%}
