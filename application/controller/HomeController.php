@@ -19,7 +19,7 @@ class HomeController extends ControllerCore
     protected $content = array(
         'Have you ever wanted to make a game for your favourite Sinclair 8-bit computer? Now is your chance, and we want you to DO YOUR WORST!',
         'See our <a href="/rules" target="_blank" class="ink-bright-blue" rel="nofollow">rules and regulations</a> before you submit your entry. If these are agreeable send your crap to <a href="mailto:shaun@square-circle.ZX.co.uk" class="ink-bright-blue" rel="nofollow">shaun@square-circle.co.uk</a> for evaluation!',
-        'If you need tips on how to create crap games for your Sinclair <strong>ZX80</strong>, <strong>ZX81</strong> or <strong>ZX Spectrum</strong> then feel free to <a href="https://groups.google.com/forum/#!topic/comp.sys.sinclair/5m7PfF0IC30" target="_blank" rel="nofollow">ask questions here</a>.',
+        'If you need tips on how to create crap games for your Sinclair <strong>ZX80</strong>, <strong>ZX81</strong> or <strong class="ink-bright-red">ZX Spectrum</strong> then feel free to <a href="https://groups.google.com/forum/#!topic/comp.sys.sinclair/5m7PfF0IC30" target="_blank" rel="nofollow">ask questions here</a>.',
     );
     
     public function __construct(){

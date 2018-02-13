@@ -1,11 +1,83 @@
 <nav class="navbar col-xs-12">
 	<ul id="nav-items" class="nav-items clearfix">
-        <li class="nav-item<?php if($this->segment == '' || strpos($this->segment, 'ome') !== false) :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/home.html" class="ink-white" rel="nofollow">CGC Home</a></li>
-		<li class="nav-item<?php if($this->segment == 'challenges') :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/challenges.html" class="ink-white" rel="nofollow">Challenges</a></li>
-		<li class="nav-item<?php if($this->segment == 'entries') :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/entries.html" class="ink-white" rel="nofollow">Entries</a></li>
-		<li class="nav-item<?php if($this->segment == 'news') :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/news.html" class="ink-white" rel="nofollow">Latest News</a></li>
-		<!-- <li class="nav-item<?php if($this->segment == 'results') :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/results.html" class="ink-white" rel="nofollow">Results</a></li> -->
-		<li class="nav-item<?php if($this->segment == 'reviews') :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/reviews.html" class="ink-white" rel="nofollow">Reviews</a></li>
-		<li class="nav-item<?php if($this->segment == 'rules') :?> paper-blue<?php else: ?> paper-black<?php endif; ?>"><a href="<?php echo $this->host; ?>/rules.html" class="ink-white" rel="nofollow">Rules</a></li>
+        <li class="nav-item<?php if($this->segment == '' || strpos($this->segment, 'home') !== false) :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+            <div class="rainbow">
+                <ul>
+                    <li class="colour red"></li>
+                    <li class="colour yellow"></li>
+                    <li class="colour green"></li>
+                    <li class="colour blue"></li>
+                </ul>
+            </div>
+            <a href="<?php echo $this->host; ?>/home.html" class="ink-bright-black" rel="nofollow">CGC Home</a>
+        </li>
+		<li class="nav-item<?php if($this->segment == 'challenges') :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+            <div class="rainbow">
+                <ul>
+                    <li class="colour red"></li>
+                    <li class="colour yellow"></li>
+                    <li class="colour green"></li>
+                    <li class="colour blue"></li>
+                </ul>
+            </div>
+            <a href="<?php echo $this->host; ?>/challenges.html" class="ink-bright-black" rel="nofollow">Challenges</a>
+        </li>
+		<li class="nav-item<?php if($this->segment == 'entries') :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+            <div class="rainbow">
+                <ul>
+                    <li class="colour red"></li>
+                    <li class="colour yellow"></li>
+                    <li class="colour green"></li>
+                    <li class="colour blue"></li>
+                </ul>
+            </div>
+            <a href="<?php echo $this->host; ?>/entries.html" class="ink-bright-black" rel="nofollow">Entries</a>
+        </li>
+		<li class="nav-item<?php if($this->segment == 'news') :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+            <div class="rainbow">
+                <ul>
+                    <li class="colour red"></li>
+                    <li class="colour yellow"></li>
+                    <li class="colour green"></li>
+                    <li class="colour blue"></li>
+                </ul>
+            </div>
+            <a href="<?php echo $this->host; ?>/news.html" class="ink-bright-black" rel="nofollow">Latest News</a>
+        </li>
+		<!-- 
+            <li class="nav-item<?php if($this->segment == 'results') :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+                <div class="rainbow">
+                    <ul>
+                        <li class="colour red"></li>
+                        <li class="colour yellow"></li>
+                        <li class="colour green"></li>
+                        <li class="colour blue"></li>
+                    </ul>
+                </div>
+                <a href="<?php echo $this->host; ?>/results.html" class="ink-bright-black" rel="nofollow">Results</a>
+            </li>
+        -->
+		<li class="nav-item<?php if($this->segment == 'reviews') :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+            <div class="rainbow">
+                <ul>
+                    <li class="colour red"></li>
+                    <li class="colour yellow"></li>
+                    <li class="colour green"></li>
+                    <li class="colour blue"></li>
+                </ul>
+            </div>
+            <a href="<?php echo $this->host; ?>/reviews.html" class="ink-bright-black" rel="nofollow">Reviews</a>
+        </li>
+		<li class="nav-item<?php if($this->segment == 'rules') :?> paper-red<?php else: ?> paper-white<?php endif; ?>">
+            <div class="rainbow">
+                <ul>
+                    <li class="colour red"></li>
+                    <li class="colour yellow"></li>
+                    <li class="colour green"></li>
+                    <li class="colour blue"></li>
+                </ul>
+            </div>
+            <a href="<?php echo $this->host; ?>/rules.html" class="ink-bright-black" rel="nofollow">Rules</a>
+        </li>
 	</ul>
 </nav>
