@@ -10,7 +10,7 @@ class ResultsController
     /**
      * @var string $subHeader
      */
-    protected $subHeader = '<strong class="ink-bright-red">Note to developer:</strong> The results will be the last page to make so <strong class="ink-bright-red">don\'t</strong> put this live!';
+    protected $subHeader = '<strong class="ink-bright-red">Note before deployment:</strong> The results will be the last page to make so <strong class="ink-bright-red">don\'t</strong> put this live until the results have been decided!';
     
     /**
      * @var array $content
