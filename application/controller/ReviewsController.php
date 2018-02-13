@@ -42,9 +42,9 @@ class ReviewsController
                 'addictiveness' => 9,
                 'total' => 9,
                 'sundry' => array(
-                    "Note that 16K users are not treated to the high resolution graphics that 48K users are.",
-                    "V1.1 is marked down to for <strong>Playability</strong> and <strong>Total</strong> by one point each due to it being a 'fixed' version."
-                )
+                    "16K users are not treated to the high resolution graphics that 48K users are",
+                    "V1.1 is marked down to for <strong>Playability</strong> and <strong>Total</strong> by one point each due to it being a 'fixed' version"
+                ),
             ),
         ),
         array(
@@ -53,14 +53,14 @@ class ReviewsController
             'developer' => "Josef Schaaf of the ZX User Club Cooperation GmbH (original German version) and Volker Bartheld (this version)",
             'yawn-sinclair-mega-game' => false,
             'content' => array(
-                "Fortresses, eh? You can't whack 'em! They're great for creating near impenetrable inner-sanctums to defend against your mighties foes, hoard treasure and protect those thing most important to you. In this case, however, the <em>Fortress</em> in question is presented as a multi-sided polygon, kind of a maths type thing that clever kids know all about, drawn beautifully and using a wise selection of the colours available on the <strong class=\"ink-bright-red\">ZX Spectrum</strong>.",
-                "This is for one or two players of opposing sides, each a binary representation of what might be your ultimate foe. But in this case, your protagonist is either someone in the same room as you, eagerly hovering around the <strong class=\"ink-bright-red\">Speccy</strong>, and likely not an enemy at all, or something even closer to your heart, Spec-chums. Your favouritest all-time super computer, the old <strong class=\"ink-bright-red\">Spectrum</strong> itself! And if you're not playing on a rubber-clad micro, then you're likely emulating it anyway, because modern computers are only ever good when they're pretending to be a <strong class=\"ink-bright-red\">ZX</strong>, simulating it's powerful one-touch entry BASIC interpreter, and everything else that's BERRilliant about it.",
-                "Volker has studiously translated the original game from German, and he's not done a half-arsed job either, along with done some other techie stuff which probably included strange concepts such as <em>debugging</em>.",
-                "What we have is another skillo entry that's got everything else right! Moving around the fortress as an attacker reduces the routes available to you, or as the defender and try to ensnare your opponent! Great fun, especially on the super-difficult one-player mode. Go get it NOW!"
+                "Fortresses, eh? You can't whack 'em! They're great for creating near impenetrable inner-sanctums to defend against your mightiest foes, hoard treasure and protect those thing most important to you. In this case, however, the <em>Fortress</em> in question is presented as a multi-sided polygon, kind of a maths type thing that clever kids know all about, drawn beautifully and using a wise selection of the colours available on the <strong class=\"ink-bright-red\">ZX Spectrum</strong>.",
+                "This is for one or two players of opposing sides. Your protagonist is either someone in the same room as you in two-player mode, eagerly hovering around the <strong class=\"ink-bright-red\">Speccy</strong>, or you can play against your much loved and favouritest all-time super computer, the old <strong class=\"ink-bright-red\">Spectrum</strong> itself.",
+                "Moving around the game-world in attack mode reduces the routes available to you, or playing as the defender will only allow a movement of three places. Should either player be within one move of each other and... Bam! It's game over for one of you.",
+                "What we have is another skillo entry that's got everything you want! Great fun, especially on the super-difficult one-player mode.",
             ),
             'screen-shot' => array(
                 'location' => "/img/",
-                'file-name' => "fortress.png",
+                'file-name' => "fortress-ingame.png",
                 'alt' => "Fortress for the 16K Speccy",
                 'class' => "img-responsive",
                 'width' => '128',
@@ -69,13 +69,13 @@ class ReviewsController
             'cgc-clapometer' => array(
                 'summary' => "Deffo a game for those brainy kids out there!",
                 'graphics' => 8,
-                'playability' => 7,
-                'addictiveness' => 9,
+                'playability' => 8,
+                'addictiveness' => 8,
                 'total' => 8,
                 'sundry' => array(
-                    "Works on a 16K Speccy (Yay!)",
-                    "One player mode is super-difficult (as the attacker)"
-                )
+                    "Works on a <strong class=\"ink-bright-red\">16K Speccy</strong> (Yay!)",
+                    "One player mode is super-difficult (or I'm constantly out-smarted by a <strong class=\"ink-bright-red\">16K ZX Spectrum</strong>)",
+                ),
             ),
         ),
     );
