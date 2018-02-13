@@ -53,10 +53,10 @@ class ReviewsController
             'developer' => "Josef Schaaf of the ZX User Club Cooperation GmbH (original German version) and Volker Bartheld (this version)",
             'yawn-sinclair-mega-game' => false,
             'content' => array(
-                "Fortresses, eh? You can't whack 'em! They're great for creating near impenetrable inner-sanctums to defend against your mighties foes, hoard treasure and protect those thing most important to you. Or at least, never having owned a Fortress, I'd imagine that this is what they <em>should</em> do. And that's probably the exact Oxford Dictionary definition of the noun 'fortress', isn't it?",
-                "Well in this case, your mighties foe is either someone in the same room as you, eagerly hovering around your <strong class=\"ink-bright-red\">Speccy</strong>, and likely not an enemy at all, or something even closer to your heart, Spec-chums. Your favouritest all-time super computer, the old <strong class=\"ink-bright-red\">Spectrum</strong> itself! And if you're not playing on a rubber-clad micro, then you're likely emulating it anyway, because modern computers are only ever good when they're pretending to be a <strong class=\"ink-bright-red\">ZX Spectrum</strong>, simulating it's powerful one-touch entry BASIC interpreter, and everything else that's BERRilliant about it. The point is that in this case you probably won't mind some fortress penetration with such foes as these, eh? (Unless you're super-competative and have to win? - Ed).",
-                "Volker has not only studiously translated the original game from German text, and he's probably not done a lazy or dodgy translation either (what is wrong with you people, it's supposed to be a <em>CRAP</em> games competition). He's done some other techie stuff which probably included strange concepts such as <em>debugging</em>, <em>refactoring</em> and other things that you wouldn't expect for a <strong>CRAP</strong> games competition to boot. So, like Winter Neurobics Pentathalon (V1.1, the fixed edition *spit*), this loses marks from the outset.",
-                "Otherwise, what we have is another skillo entry that's got everything else right! Go get it, protect your fortress. Save the World! Or something."
+                "Fortresses, eh? You can't whack 'em! They're great for creating near impenetrable inner-sanctums to defend against your mighties foes, hoard treasure and protect those thing most important to you. In this case, however, the <em>Fortress</em> in question is presented as a multi-sided polygon, kind of a maths type thing that clever kids know all about, drawn beautifully and using a wise selection of the colours available on the <strong class=\"ink-bright-red\">ZX Spectrum</strong>.",
+                "This is for one or two players of opposing sides, each a binary representation of what might be your ultimate foe. But in this case, your protagonist is either someone in the same room as you, eagerly hovering around the <strong class=\"ink-bright-red\">Speccy</strong>, and likely not an enemy at all, or something even closer to your heart, Spec-chums. Your favouritest all-time super computer, the old <strong class=\"ink-bright-red\">Spectrum</strong> itself! And if you're not playing on a rubber-clad micro, then you're likely emulating it anyway, because modern computers are only ever good when they're pretending to be a <strong class=\"ink-bright-red\">ZX</strong>, simulating it's powerful one-touch entry BASIC interpreter, and everything else that's BERRilliant about it.",
+                "Volker has studiously translated the original game from German, and he's not done a half-arsed job either, along with done some other techie stuff which probably included strange concepts such as <em>debugging</em>.",
+                "What we have is another skillo entry that's got everything else right! Moving around the fortress as an attacker reduces the routes available to you, or as the defender and try to ensnare your opponent! Great fun, especially on the super-difficult one-player mode. Go get it NOW!"
             ),
             'screen-shot' => array(
                 'location' => "/img/",
@@ -74,7 +74,7 @@ class ReviewsController
                 'total' => 7,
                 'sundry' => array(
                     "Works on a 16K Speccy (Yay!)",
-                    "But loses marks for the effort put in (Boo!)"
+                    "One player mode is super-difficult"
                 )
             ),
         ),
