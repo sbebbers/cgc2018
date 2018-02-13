@@ -74,7 +74,7 @@ class ReviewsController
                 'total' => 7,
                 'sundry' => array(
                     "Works on a 16K Speccy (Yay!)",
-                    "One player mode is super-difficult"
+                    "One player mode is super-difficult (as the attacker)"
                 )
             ),
         ),
