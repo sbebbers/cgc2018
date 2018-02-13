@@ -23,7 +23,7 @@ class ReviewsController
             'yawn-sinclair-mega-game' => true,
             'content' => array(
                 "It won't surprise anyone out there that I wasn't very good at sports when I were a lad. Not one bit. Of course, I used to play a game of Footy over the park with jumpers for goal posts, but I just wasn't ever very Footy-ish, and always the last to be picked for any sporty-type thing, so when this sports sim landed I feared the worst. Would it be a joystick-breaking or keyboard-bashing affair? Yikes!",
-                "On loading <em>Winter Neurobics Pentathalon</em> though, my fears were quickly quashed; this is not just a mindless joystick waggler or keyboard basher, the task is to precisely time your interactions with the keyboard according to the on-screen prompt, so this is more of a celeberal workout than one which would quickly require a new keyboard!",
+                "On loading <em>Winter Neurobics Pentathalon</em> though, my fears were quickly quashed; this is not just a mindless joystick-waggler or keyboard-basher, the task is to precisely time your interactions with the keyboard according to the on-screen prompt, so this is more of a celeberal workout than one which would quickly require a new keyboard!",
                 "Each of the five events, which are <strong class=\"ink-bright-blue\">Ski Jump</strong>, <strong class=\"ink-bright-blue\">Speed Skating</strong>, <strong class=\"ink-bright-blue\">Downhill Slalom</strong>, <strong class=\"ink-bright-blue\">Curling</strong>, and <strong class=\"ink-bright-blue\">Luge</strong> increase in difficulty respectively. In fact, at the time of writing, I've not yet managed a successful Luge run. And on the original sumbission (let's call it V1.0), the Luge event couldn't be completed, so that alone gets it an extra point!",
                 "Make no mistake, <em>Winter Neurobics Pentathalon</em> is ACE! It's a new sort of sports sim for those of us who don't want to replace our olde keyboard membranes any time soon, whilst providing a significant challenge that'll keep you coming back time and again. Capture the Winter Olympic fervour with this fab game!",
             ),
@@ -54,57 +54,27 @@ class ReviewsController
             'yawn-sinclair-mega-game' => false,
             'content' => array(
                 "Fortresses, eh? You can't whack 'em! They're great for creating near impenetrable inner-sanctums to defend against your mighties foes, hoard treasure and protect those thing most important to you. Or at least, never having owned a Fortress, I'd imagine that this is what they <em>should</em> do. And that's probably the exact Oxford Dictionary definition of the noun 'fortress', isn't it?",
-                "Well in this case, your mighties foe is either someone in the same room as you, eagerly hovering around your Speccy, and likely not an enemy at all, or something even closer to your heart, Spec-chums. Your favouritest all-time super computer, the <strong class=\"ink-bright-red\">Speccy</strong> itself! And if you're not playing on a rubber-clad micro, then you're likely emulating it anyway, because modern computers are only ever good when they're pretending to be a <strong class=\"ink-bright-red\">ZX Spectrum</strong> anyway, with it's powerful one-touch entry BASIC interpreter and everything else that's BERRilliant about it. The point is that in this case you probably won't mind some fortress penetration with such foes as these, eh?.",
-                "Volker has not only studiously translated the original game from German text, and he's not done a lazy or dodgy translation either (what is wrong with you people, it's supposed to be a <em>CRAP</em> games competition), he's also done some other techie stuff which probably also included strange concepts such as <em>debugging</em>, <em>refactoring</em> and other things that you wouldn't expect for a <strong>CRAP</strong> games competition. So, like Winter Neurobics Pentathalon (V1.1, the fixed edition *spit*), this loses marks from the outset.",
+                "Well in this case, your mighties foe is either someone in the same room as you, eagerly hovering around your <strong class=\"ink-bright-red\">Speccy</strong>, and likely not an enemy at all, or something even closer to your heart, Spec-chums. Your favouritest all-time super computer, the old <strong class=\"ink-bright-red\">Spectrum</strong> itself! And if you're not playing on a rubber-clad micro, then you're likely emulating it anyway, because modern computers are only ever good when they're pretending to be a <strong class=\"ink-bright-red\">ZX Spectrum</strong>, simulating it's powerful one-touch entry BASIC interpreter, and everything else that's BERRilliant about it. The point is that in this case you probably won't mind some fortress penetration with such foes as these, eh? (Unless you're super-competative and have to win? - Ed).",
+                "Volker has not only studiously translated the original game from German text, and he's probably not done a lazy or dodgy translation either (what is wrong with you people, it's supposed to be a <em>CRAP</em> games competition). He's done some other techie stuff which probably included strange concepts such as <em>debugging</em>, <em>refactoring</em> and other things that you wouldn't expect for a <strong>CRAP</strong> games competition to boot. So, like Winter Neurobics Pentathalon (V1.1, the fixed edition *spit*), this loses marks from the outset.",
                 "Otherwise, what we have is another skillo entry that's got everything else right! Go get it, protect your fortress. Save the World! Or something."
             ),
             'screen-shot' => array(
                 'location' => "/img/",
-                'file-name' => "Score.png",
+                'file-name' => "fortress.png",
                 'alt' => "Fortress for the 16K Speccy",
                 'class' => "img-responsive",
                 'width' => '128',
                 'height' => '96',
             ),
             'cgc-clapometer' => array(
-                'summary' => "A great mental challenge which unlike other sports sims won't bust your keyboard!",
-                'graphics' => 7,
-                'playability' => 9,
-                'addictiveness' => 9,
-                'total' => 9,
+                'summary' => "Deffo a game for those brainy kids out there!",
+                'graphics' => 8,
+                'playability' => 8,
+                'addictiveness' => 7,
+                'total' => 7,
                 'sundry' => array(
-                    "Requires 16K of RAM or more."
-                )
-            ),
-        ),
-        array(
-            'title' => "Winter Neurobics Pentathalon",
-            'sub-header' => "Unofficial Winter Olymics 2018 tie-in",
-            'developer' => "Kweepa",
-            'yawn-sinclair-mega-game' => true,
-            'content' => array(
-                "It won't surprise anyone out there that I wasn't very good at sports when I were a lad. Not one bit. Of course, I used to play a game of Footy over the park with jumpers for goal posts, but I just wasn't ever very Footy-ish, and always the last to be picked for any sporty-type thing, so when this sports sim landed I feared the worst. Would it be a joystick-breaking or keyboard-bashing affair? Yikes!",
-                "On loading <em>Winter Neurobics Pentathalon</em> though, my fears were quickly quashed; this is not just a mindless joystick waggler or keyboard basher, the task is to precisely time your interactions with the keyboard according to the on-screen prompt, so this is more of a celeberal workout than one which would quickly require a new keyboard!",
-                "Each of the five events, which are <strong class=\"ink-bright-blue\">Ski Jump</strong>, <strong class=\"ink-bright-blue\">Speed Skating</strong>, <strong class=\"ink-bright-blue\">Downhill Slalom</strong>, <strong class=\"ink-bright-blue\">Curling</strong>, and <strong class=\"ink-bright-blue\">Luge</strong> increase in difficulty respectively. In fact, at the time of writing, I've not yet managed a successful Luge run. And on the original sumbission (let's call it V1.0), the Luge event couldn't be completed, so that alone gets it an extra point!",
-                "Make no mistake, <em>Winter Neurobics Pentathalon</em> is ACE! It's a new sort of sports sim for those of us who don't want to replace our olde keyboard membranes any time soon, whilst providing a significant challenge that'll keep you coming back time and again. Capture the Winter Olympic fervour with this fab game!",
-            ),
-            'screen-shot' => array(
-                'location' => "/img/",
-                'file-name' => "Score.png",
-                'alt' => "Shown working on a 16K Speccy",
-                'class' => "img-responsive",
-                'width' => '128',
-                'height' => '96',
-            ),
-            'cgc-clapometer' => array(
-                'summary' => "A great mental challenge which unlike other sports sims won't bust your keyboard!",
-                'graphics' => 7,
-                'playability' => 9,
-                'addictiveness' => 9,
-                'total' => 9,
-                'sundry' => array(
-                    "Note that 16K users are not treated to the high resolution graphics that 48K users are.",
-                    "V1.1 is marked down to for <strong>Playability</strong> and <strong>Total</strong> by one point each due to it being a 'fixed' version."
+                    "Works on a 16K Speccy (Yay!)",
+                    "But loses marks for the effort put in (Boo!)"
                 )
             ),
         ),
