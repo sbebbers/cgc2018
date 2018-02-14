@@ -10,7 +10,7 @@ class HomeModel extends ModelCore
     protected $table;
     public function __construct(){
         ModelCore::__construct("readUser");
-        $this->table = $this->tables->view;
+        $this->table = $this->tables->home;
     }
     
     /**
@@ -22,7 +22,7 @@ class HomeModel extends ModelCore
      * @version 0.1.5-RC2
      * @return  array
      */
-    public function getView($colName = 'home'){
+    public function getContent($colName = 'home'){
         $query    = "SELECT `header`, `sub_header`, `content` FROM `{$this->db}`.`{$this->table}` "
             . "WHERE `name`=?;";
         return $this->execute($this->connection->prepare($query), [$colName]);

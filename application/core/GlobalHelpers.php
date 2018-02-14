@@ -195,7 +195,7 @@ function isDevelopmentVersion(){
  * @return  string
  */
 function logErrorPath(string $routeTo = ''){
-    $baseDir = __DIR__ . "/logs";
+    $baseDir = serverPath("/logs");
     return str_replace("\\","/", "{$baseDir}{$routeTo}");
 }
 

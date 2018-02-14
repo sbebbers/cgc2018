@@ -78,6 +78,38 @@ class ReviewsController
                 ),
             ),
         ),
+        array(
+            'title' => "Plumbers Don't Wear Ties",
+            'sub-header' => "Super Texty Adventure",
+            'developer' => "PROSM Software",
+            'yawn-sinclair-mega-game' => true,
+            'content' => array(
+                "Be ready for some almost NSFW type text adventuring Spec-chums thanks to PROSM's slightly belated conversion of the smash hit (probably) Windows 3.1 and Panasonic 3DO game <em>Plumbers Don't Wear Ties</em>.",
+                "The rather plain loading screen and title could lead you to a mis-apprehension, but like crap games from previous years (albeit with more blatant names) such as <em>UDG - Strip Snap</em>, your pulse will soon be on the up, especially from the suductive, almost croner-like use of the powerful beeper on loading. Are you ready for some lurve?!?",
+                "The story starts with John receiving a call from his mother who basically wants him to find someone to marry, and for some reason, she thinks the best way to impress a Women from the 1990s is for him to wear a Polkadot tie. Phwhoar!",
+                "Early on in the game John meets Jane by chance, and from here you then control the events with the aim of getting these two well-matched potential lovers together.",
+                "This is kind of a new sort of text adventure for the <strong class=\"ink-bright-red\">Spectrum</strong>, in that rather than endlessly entering in long commands such as N, S, E, L, I and all of those other shortcuts I remember that usually worked on most textys, you're given options at each stage based on the current events. Who makes the first move is your first decision, and then the story continues based on that decision. Phew! No getting eaten by a Grue here.",
+                "Sultry graphics round off this production with an almost perfect 10! Get yer rocks off with this steamy production."
+            ),
+            'screen-shot' => array(
+                'location' => "/img/",
+                'file-name' => "plumbers-ingame.png",
+                'alt' => "Plumbers Don't Wear Ties for the 48K Spectrum or better",
+                'class' => "img-responsive",
+                'width' => '128',
+                'height' => '96',
+            ),
+            'cgc-clapometer' => array(
+                'summary' => "Just the ticket to get you in the mood for some lovin'!",
+                'graphics' => 9,
+                'playability' => 9,
+                'addictiveness' => 9,
+                'total' => 9,
+                'sundry' => array(
+                    "Phwoar! Check out those pixels!",
+                ),
+            ),
+        ),
     );
     
     /**
