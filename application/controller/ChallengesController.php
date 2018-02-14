@@ -1,6 +1,10 @@
 <?php
+use Application\Controller\ControllerCore;
+use Application\Model\Read\ChallengesModel;
 
-class ChallengesController
+require_once(serverPath("/model/read/ChallengesModel.php"));
+
+class ChallengesController extends ControllerCore
 {
     /**
      * @var string $header
@@ -15,35 +19,11 @@ class ChallengesController
     /**
      * @var array $content
      */
-    protected $content = array(
-        'I' => array(
-            'name' => "One-Liner",
-            'class' => "ink-bright-blue",
-            'description' => array(
-                "This is <strong class=\"ink-bright-red\">ZX Spectrum</strong> and compatible machines, as you are required to create your game (or other softwares) in only one line of BASIC only.",
-                "Fortunately, the Speccy has a super-powerful interpreter that allows for so many possibilities in such small space.",
-            ),
-        ),
-        'II' => array(
-            'name' => "Twelve-Liner",
-            'class' => "ink-bright-black",
-            'description' => array(
-                "Not to leave out the <strong>ZX80</strong> or <strong>ZX81</strong>, I guess the equivalent would be to make a software in 12 lines of BASIC for these mighty micros.",
-                "If you require some hints, as long as you don't <strong>RUN</strong> your symbolic listings to execute it (i.e., use <strong>GOTO SGN PI</strong> instead) then you will not lose the VAR stack. In other words, your variables will be preserved when using <strong>SAVE</strong>.",
-                "This is a 'Twelve-Liner' to allow for something like this at the end of your listing (though not possible on the ZX80 without a new ROM):",
-                "9998 SAVE \"CRAP\"",
-                "9999 GOTO SGN PI",
-            ),
-        )
-    );
-    
-    /**
-     * @var stdClass $view
-     */
-    public $view;
+    protected $content = array();
     
     public function __construct(){
-        $this->view = new stdClass();
+        ControllerCore::__construct();
+        $this->sql = new ChallengesModel();
         $this->setView();
     }
     
@@ -62,6 +42,14 @@ class ChallengesController
     }
     
     public function getContent(){
-        return $this->content;
+        $content = array();
+        foreach($this->sql->getContent() as $key => $data){
+            $content[$data['numeral']] = [
+                'name' => $data['name'],
+                'class' => $data['class'],
+                'description' => json_decode($data['description'], true),
+            ];
+        }
+        return $content;
     }
 }
