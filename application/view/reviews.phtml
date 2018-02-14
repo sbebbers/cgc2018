@@ -21,10 +21,9 @@
             ->close("div");
         endif;
 
-        $this->h(1, $this->header, "header")
-        ->h(3, $this->subHeader, "sub_header");
+        $this->h(1, $this->header, "header")->h(3, $this->subHeader, "sub_header");
         foreach($this->content as $content):
-            $this->p()->addClass("h2")->closeElement()->text($content['title'])->close("p");
+            $this->p()->id($this->lib->convertToHtmlId("{$content['title']}"))->addClass("h2")->closeElement()->text($content['title'])->close("p");
             $this->p()->addClass(array("h3", "ink-cyan"))->closeElement()->text("In a nut-shell: {$content['sub-header']}")->close("p");
             $this->p()->addClass(array("h5", "ink-cyan"))->closeElement()->text("Developer: {$content['developer']}")->close("p");
             
@@ -56,9 +55,7 @@
             
             foreach($content['cgc-clapometer'] as $key => $ratings):
                 if($key == 'summary'):
-                    $this->open("div", '', array("col-xs-12", "col-md-6", "pull-right"));
-                        $this->open("div", '', "clapometer-box");
-                            $this->p()->addClass("clapometer-summary")->closeElement()->text("<strong class=\"ink-blue\">" . ucFirst($key) . ":</strong>&nbsp;{$ratings}")->close("p");
+                    $this->open("div", '', array("col-xs-12", "col-md-6", "pull-right"))->open("div", '', "clapometer-box")->p()->addClass("clapometer-summary")->closeElement()->text("<strong class=\"ink-blue\">" . ucFirst($key) . ":</strong>&nbsp;{$ratings}")->close("p");
                     continue;
                 elseif($key != 'sundry'):
                     $this->p()->addClass("clapometer-ratings")->closeElement()->text("<strong class=\"ink-blue\">" . ucFirst($key) . ":</strong> &nbsp;");

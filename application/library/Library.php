@@ -578,7 +578,7 @@ class Library
      * @version 0.1.5-RC2
      * @return  object
      */
-    function filePostContents(string $url, $data, string $applicationType = 'x-www-form-urlencoded', string $username = '', string $password = '', string $characterEncoding = 'utf-8'){
+    public function filePostContents(string $url, $data, string $applicationType = 'x-www-form-urlencoded', string $username = '', string $password = '', string $characterEncoding = 'utf-8'){
         if($applicationType === 'x-www-form-urlencoded'){
             if(!is_object($data) || !is_array($data)){
                 $data    = [$data];
@@ -604,5 +604,26 @@ class Library
          
         $context    = stream_context_create($options);
         return file_get_contents($url, false, $context);
+    }
+    
+    /**
+     * Creates text suitable for HTML ids
+     * 
+     * @param   string
+     * @author  sbebbington
+     * @date    12 Feb 2018 22:59:54
+     * @return string
+     */
+    public function convertToHtmlId(string $text = ''){
+        $toReplace = [
+            "'" => "",
+            '.' => " ",
+            '(' => "",
+            ')' => "",
+        ];
+        foreach($toReplace as $key => $data){
+            $text = str_replace($key, $data, $text);
+        }
+        return strtolower(str_replace(" ", "-", trim($text)));
     }
 }

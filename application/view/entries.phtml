@@ -24,7 +24,7 @@
         ->h(3, $this->subHeader, "sub_header");
         $this->open("hr", '', null, true);
         foreach($this->content as $key => $entry):
-            $this->h(4, "{$key}.&nbsp;{$entry['title']}");
+            $this->h(4, "{$key}.&nbsp;{$entry['title']}", $this->lib->convertToHtmlId("{$entry['title']}"));
             $this->p()->closeElement()->text("<span class=\"ink-bright-red\">Format details:</span> {$entry['format']}")->close("p");
             $this->p()->addClass("col-xs-12 col-md-4")->closeElement()
                 ->text("<a href=\"{$entry['download']}\" rel=\"nofollow\">")
