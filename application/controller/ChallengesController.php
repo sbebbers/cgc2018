@@ -1,7 +1,7 @@
 <?php
 use Application\Controller\ControllerCore;
 use Application\Model\Read\ChallengesModel;
-use Application\Core\FrameworkException\FrameworkException;
+
 require_once(serverPath("/model/read/ChallengesModel.php"));
 
 class ChallengesController extends ControllerCore
