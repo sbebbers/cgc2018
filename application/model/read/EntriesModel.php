@@ -24,7 +24,7 @@ class EntriesModel extends ModelCore
      * @throws  FrameworkException
      */
     public function getContent($conditional = null){
-        $query    = "SELECT `title`, `format`, `filename`, `alt`, `download` FROM `{$this->db}`.`{$this->table}`";
+        $query    = "SELECT `numeral`, `title`, `format`, `filename`, `alt`, `download` FROM `{$this->db}`.`{$this->table}`";
         if(!empty($conditional)){
             $query .= " WHERE `numeral`=?";
         }

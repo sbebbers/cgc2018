@@ -16,11 +16,6 @@ class ChallengesController extends ControllerCore
      */
     protected $subHeader = 'Earn a crisp by entering one or more of our challenges';
     
-    /**
-     * @var array $content
-     */
-    protected $content = array();
-    
     public function __construct(){
         ControllerCore::__construct();
         $this->sql = new ChallengesModel();
