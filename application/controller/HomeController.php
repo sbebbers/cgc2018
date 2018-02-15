@@ -2,7 +2,7 @@
 use Application\Controller\ControllerCore;
 use Application\Model\Read\HomeModel;
 
-require_once(serverPath("/application/model/read/HomeModel.php"));
+require_once(serverPath("/model/read/HomeModel.php"));
 
 class HomeController extends ControllerCore
 {

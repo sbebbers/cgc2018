@@ -2,7 +2,7 @@
 use Application\Controller\ControllerCore;
 use Application\Model\Read\NewsModel;
 
-require_once(serverPath("/application/model/read/NewsModel.php"));
+require_once(serverPath("/model/read/NewsModel.php"));
 
 class NewsController extends ControllerCore
 {

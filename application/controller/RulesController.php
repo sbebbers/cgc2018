@@ -2,7 +2,7 @@
 use Application\Controller\ControllerCore;
 use Application\Model\Read\RulesModel;
 
-require_once(serverPath("/application/model/read/RulesModel.php"));
+require_once(serverPath("/model/read/RulesModel.php"));
 
 class RulesController extends ControllerCore
 {

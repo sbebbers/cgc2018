@@ -2,7 +2,7 @@
 use Application\Controller\ControllerCore;
 use Application\Model\Read\ReviewsModel;
 
-require_once(serverPath("/application/model/read/ReviewsModel.php"));
+require_once(serverPath("/model/read/ReviewsModel.php"));
 
 class ReviewsController extends ControllerCore
 {
