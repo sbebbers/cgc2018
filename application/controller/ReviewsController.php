@@ -1,6 +1,10 @@
 <?php
+use Application\Controller\ControllerCore;
+use Application\Model\Read\ReviewsModel;
 
-class ReviewsController
+require_once(serverPath("/application/model/read/ReviewsModel.php"));
+
+class ReviewsController extends ControllerCore
 {
     /**
      * @var string $header
@@ -112,11 +116,9 @@ class ReviewsController
         ),
     );
     
-    /**
-     * @var stdClass $view
-     */
-    public $view;
     public function __construct(){
+        ControllerCore::__construct();
+        $this->sql = new ReviewsModel();
         $this->view = new stdClass();
         $this->setView();
     }

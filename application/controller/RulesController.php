@@ -1,6 +1,10 @@
 <?php
+use Application\Controller\ControllerCore;
+use Application\Model\Read\RulesModel;
 
-class RulesController
+require_once(serverPath("/application/model/read/RulesModel.php"));
+
+class RulesController extends ControllerCore
 {
     /**
      * @var string $header
@@ -28,12 +32,9 @@ class RulesController
         'X'     => "All submissions will be distributed electronically via the Internet for free. If there is enough interest then a real cassette version as a compilation will be published some time in 2019. All entrants wanting their work to be published on cassette will receive a single Polo mint as payment for each copy sold. Any game which may land me or anyone else associated with this competition with legal difficulties will be disqualified from the outset",
     ];
     
-    /**
-     * @var stdClass $view
-     */
-    public $view;
-    
     public function __construct(){
+        ControllerCore::__construct();
+        $this->sql = new RulesModel();
         $this->view = new stdClass();
         $this->setPageView();
     }

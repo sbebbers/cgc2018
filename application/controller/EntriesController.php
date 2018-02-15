@@ -1,6 +1,10 @@
 <?php
+use Application\Controller\ControllerCore;
+use Application\Model\Read\EntriesModel;
 
-class EntriesController
+require_once(serverPath("/model/read/EntriesModel.php"));
+
+class EntriesController extends ControllerCore
 {
     /**
      * @var string $header
@@ -70,13 +74,9 @@ class EntriesController
         ),
     );
     
-    /**
-     * @var stdClass $view
-     */
-    public $view;
-    
     public function __construct(){
-        $this->view = new stdClass();
+        ControllerCore::__construct();
+        $this->sql = new EntriesModel();
         $this->setView();
     }
     
