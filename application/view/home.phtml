@@ -24,6 +24,8 @@
             $this->open("div", "home-content", array("col-xs-12", "col-md-8", "pull-left"));
                 $this->h(1, $this->header, "header")
                 ->h(3, $this->subHeader, "sub_header");
+                $hrCounter = 1;
+                $hrDirection = 1;
                 foreach($this->content as $data):
                     $this->p()->addClass("pad-right-8")->closeElement()->text($data, true)->close("p");
                 endforeach;
@@ -33,8 +35,8 @@
             $this->close("div");
             $this->open("div", "", array("col-xs-12", "clearfix"))
             ->close("div");
-        $this->text("<hr class=\"clearfix\" />")
-        ->close("div")
+            include($this->partial['hrcolours']);
+        $this->close("div")
     ->close("div");
     require_once("{$this->partial['footer']}");
 ?></body>

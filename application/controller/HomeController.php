@@ -29,6 +29,9 @@ class HomeController extends ControllerCore
         ControllerCore::__construct();
         $this->sql = new HomeModel();
         $this->setView();
+        if(empty($this->view->hrClasses)){
+            $this->view->hrClasses = $this->getHRClasses();
+        }
     }
     
     public function setView(){

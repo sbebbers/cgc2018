@@ -22,6 +22,8 @@
         endif;
 
         $this->h(1, $this->header, "header")->h(3, $this->subHeader, "sub_header");
+        $hrCounter = 1;
+        $hrDirection = 1;
         foreach($this->content as $content):
             $this->p()->id($this->lib->convertToHtmlId("{$content['title']}"))->addClass("h2")->closeElement()->text($content['title'])->close("p");
             $this->p()->addClass(array("h3", "ink-cyan"))->closeElement()->text("In a nut-shell: {$content['sub-header']}")->close("p");
@@ -80,9 +82,8 @@
             if($clapOMeterBox === true):
                 $this->close("div");
                 $clapOMeterBox = false;
+                include($this->partial['hrcolours']);
             endif;
-            
-            $this->open("hr", '', "clearfix", true);
         endforeach;
     $this->close("div");
     require_once("{$this->partial['footer']}");

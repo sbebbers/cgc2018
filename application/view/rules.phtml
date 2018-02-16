@@ -23,7 +23,8 @@
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header")
         ->open("div", "rules", "container");
-            $i = $c = 1;
+            $hrCounter = 1;
+            $hrDirection = 1;
             foreach($this->rules as $key => $data):
                 $this->p()->id("rule_{$key}")->closeElement()
                     ->span("{$key}")->text("<strong>{$key}.&nbsp;</strong>")->close("span")

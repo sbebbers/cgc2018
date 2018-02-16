@@ -23,6 +23,8 @@
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header");
         $this->open("hr", '', "clearfix", true);
+        $hrCounter = 1;
+        $hrDirection = 1;
         foreach($this->content as $key => $entry):
             $this->h(4, "{$key}.&nbsp;{$entry['title']}", $this->lib->convertToHtmlId("{$entry['title']}"));
             $this->p()->closeElement()->text("<span class=\"ink-bright-red\">Format details:</span> {$entry['format']}")->close("p");
@@ -38,7 +40,7 @@
                     )
                 ->close("a");
             $this->close("p");
-            $this->open("hr", '', "clearfix", true);
+            include($this->partial['hrcolours']);
         endforeach;
     $this->close("div");
     require_once("{$this->partial['footer']}");

@@ -22,7 +22,8 @@
 
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header");
-        
+        $hrCounter = 1;
+        $hrDirection = 1;
         foreach($this->content as $key => $data):
             $this->h(4, "{$key}.&nbsp;{$data['name']}", $key, $data['class']);
             foreach($data['description'] as $content):
@@ -30,7 +31,7 @@
                     ->text($content, true)
                 ->close("p");
             endforeach;
-            $this->open("hr", '', "clearfix", true);
+            include($this->partial['hrcolours']);
         endforeach;
         
     $this->close("div");

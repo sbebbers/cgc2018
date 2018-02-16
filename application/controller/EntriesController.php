@@ -31,6 +31,9 @@ class EntriesController extends ControllerCore
         $this->view->header = $this->getHeader();
         $this->view->subHeader = $this->getSubHeader();
         $this->view->content = $this->getContent();
+        if(empty($this->view->hrClasses)){
+            $this->view->hrClasses = $this->getHRClasses();
+        }
     }
     
     /**

@@ -73,6 +73,9 @@ class NewsController extends ControllerCore
         $this->sql = new NewsModel();
         $this->view = new stdClass();
         $this->setView();
+        if(empty($this->view->hrClasses)){
+            $this->view->hrClasses = $this->getHRClasses();
+        }
     }
     
     public function setView(){
