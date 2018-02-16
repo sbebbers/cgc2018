@@ -28,7 +28,7 @@
                 foreach($newsItem['description'] as $text):
                     $this->p()->id("news-item-{$key}")->closeElement()->text($text)->close("p");
                 endforeach;
-                $this->open("hr", '', null, true);
+                $this->open("hr", '', "clearfix", true);
             endforeach;
         $this->close("div");
     require_once("{$this->partial['footer']}");

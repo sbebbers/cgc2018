@@ -1,6 +1,10 @@
 <?php
+use Application\Controller\ControllerCore;
+use Application\Model\Read\NewsModel;
 
-class NewsController
+require_once(serverPath("/model/read/NewsModel.php"));
+
+class NewsController extends ControllerCore
 {
     /**
      * @var string $header
@@ -64,12 +68,9 @@ class NewsController
          ),
     );
     
-    /**
-     * @var stdClass $view
-     */
-    public $view;
-    
     public function __construct(){
+        ControllerCore::__construct();
+        $this->sql = new NewsModel();
         $this->view = new stdClass();
         $this->setView();
     }

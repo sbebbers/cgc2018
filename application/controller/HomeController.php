@@ -1,5 +1,8 @@
 <?php
 use Application\Controller\ControllerCore;
+use Application\Model\Read\HomeModel;
+
+require_once(serverPath("/model/read/HomeModel.php"));
 
 class HomeController extends ControllerCore
 {
@@ -24,6 +27,7 @@ class HomeController extends ControllerCore
     
     public function __construct(){
         ControllerCore::__construct();
+        $this->sql = new HomeModel();
         $this->setView();
     }
     

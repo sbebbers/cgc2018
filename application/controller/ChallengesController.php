@@ -1,7 +1,7 @@
 <?php
 use Application\Controller\ControllerCore;
 use Application\Model\Read\ChallengesModel;
-use Application\Core\FrameworkException\FrameworkException;
+
 require_once(serverPath("/model/read/ChallengesModel.php"));
 
 class ChallengesController extends ControllerCore
@@ -15,11 +15,6 @@ class ChallengesController extends ControllerCore
      * @var string $subHeader
      */
     protected $subHeader = 'Earn a crisp by entering one or more of our challenges';
-    
-    /**
-     * @var array $content
-     */
-    protected $content = array();
     
     public function __construct(){
         ControllerCore::__construct();

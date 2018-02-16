@@ -1,12 +1,10 @@
 /* Global */
-.nav-items > li{
-    position:relative;
-}
+strike,.strike{text-decoration:line-through}
+.nav-items > li{position:relative}
 
 .nav-items > li .rainbow{
     position: absolute;
     top: -15px;
-    /* left: 0; */
     right: -8px;
     height: 15px;
     width: 50px;

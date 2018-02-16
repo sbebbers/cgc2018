@@ -28,9 +28,10 @@
                     ->span("{$key}")->text("<strong>{$key}.&nbsp;</strong>")->close("span")
                     ->text("{$data}")
                 ->close("p");
+                $this->open("hr", '', "clearfix", true);
             endforeach;
-            $this->open("hr", '', null, true)
-        ->close("div");
+            
+        $this->close("div");
     require_once("{$this->partial['footer']}");
 ?></body>
 </html>

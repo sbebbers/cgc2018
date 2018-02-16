@@ -25,7 +25,7 @@
         ->p()->id("main_content")->closeElement()
             ->text($this->content, true)
         ->close("p")
-        ->open("hr", '', null, true)
+        ->open("hr", '', "clearfix", true)
     ->close("div");
     require_once("{$this->partial['footer']}");
 ?></body>
