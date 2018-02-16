@@ -25,7 +25,7 @@ class ControllerCore
         if(!empty($_POST)){
             $this->setPost();
         }
-        $this->view     = new stdClass();        
+        $this->view     = new stdClass();
         $this->host     = host();
     }
     
@@ -85,5 +85,25 @@ class ControllerCore
      */
     public function setFlashMessage($key, $value){
         $_SESSION['flashMessage'][$key] = $value;
+    }
+    
+    /**
+     * Gets the altenating 
+     * 
+     * @author	Shaun B
+     * @date	16 Feb 2018 14:35:43
+     * @return	array
+     */
+    public function getHRClasses(){
+        return [
+            'hr-bright-black',
+            'hr-blue',
+            'hr-red',
+            'hr-magenta',
+            'hr-green',
+            'hr-cyan',
+            'hr-yellow',
+            'hr-bright-white'
+        ];
     }
 }

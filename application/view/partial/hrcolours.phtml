@@ -1,0 +1,8 @@
+<?php 
+$hrClass = $this->hrClasses[$i];
+$i += $c;
+if($i > 6 || $i < 2):
+    $c =- $c;
+endif;
+$this->open("hr", '', ["{$hrClass}", "clearfix"], true);
+?>

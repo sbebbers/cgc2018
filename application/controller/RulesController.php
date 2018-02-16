@@ -37,6 +37,9 @@ class RulesController extends ControllerCore
         $this->sql = new RulesModel();
         $this->view = new stdClass();
         $this->setPageView();
+        if(empty($this->view->hrClasses)){
+            $this->view->hrClasses = $this->getHRClasses();
+        }
     }
     
     /**

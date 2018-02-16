@@ -4,7 +4,7 @@
     $this->open("head");
         require_once("{$this->partial['header']}");
     $this->close("head");
-?><body class="paper-white ink-bright-black">
+?><body class="paper-white ink-bright-black">	
 <?php
     $this->open("div", "content", "container");
 
@@ -23,12 +23,13 @@
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header")
         ->open("div", "rules", "container");
+            $i = $c = 1;
             foreach($this->rules as $key => $data):
                 $this->p()->id("rule_{$key}")->closeElement()
                     ->span("{$key}")->text("<strong>{$key}.&nbsp;</strong>")->close("span")
                     ->text("{$data}")
                 ->close("p");
-                $this->open("hr", '', "clearfix", true);
+                include($this->partial['hrcolours']);
             endforeach;
             
         $this->close("div");

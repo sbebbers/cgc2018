@@ -68,6 +68,7 @@ class Core extends HtmlBuilder
             'header'    => (file_exists(serverPath("/view/partial/header.phtml"))) ? serverPath("/view/partial/header.phtml") : '',
             'footer'    => (file_exists(serverPath("/view/partial/footer.phtml"))) ? serverPath("/view/partial/footer.phtml") : '',
             'navbar'    => (file_exists(serverPath("/view/partial/navbar.phtml"))) ? serverPath("/view/partial/navbar.phtml") : '',
+            'hrcolours' => (file_exists(serverPath("/view/partial/hrcolours.phtml"))) ? serverPath("/view/partial/hrcolours.phtml") : '',
         );
     }
     

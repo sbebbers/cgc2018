@@ -319,6 +319,20 @@ strike,.strike{text-decoration:line-through}
 .paper-cyan{background:#0cc}
 .paper-yellow{background:#cc0}
 .paper-white{background:#ccc}
+.hr-bright-black{height:0;border: 1px solid #000}
+.hr-blue{height:0;border: 1px solid #00c}
+.hr-bright-blue{height:0;border: 1px solid #00f}
+.hr-red{height:0;border: 1px solid #c00}
+.hr-bright-red{height:0;border: 1px solid #f00}
+.hr-magenta{height:0;border: 1px solid #c0c}
+.hr-bright-magenta{height:0;border: 1px solid #f0f}
+.hr-green{height:0;border: 1px solid #0c0}
+.hr-bright-green{height:0;border: 1px solid #0f0}
+.hr-cyan{height:0;border: 1px solid #0cc}
+.hr-bright-cyan{height:0;border: 1px solid #0ff}
+.hr-yellow{height:0;border: 1px solid #cc0}
+.hr-bright-yellow{height:0;border: 1px solid #ff0}
+.hr-bright-white{height:0;border: 1px solid #fff}
 a:hover,a:clicked,a:visited{cursor:pointer}
 .review-screen-shot{padding:0 16px 0 0;margin-top:0}
 .clapometer-box{border:2px solid #cc0;padding: 0px 8px 0px 8px}
