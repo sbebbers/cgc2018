@@ -17,18 +17,13 @@ class NewsModel extends ModelCore
     /**
      * Returns content based on the Numeral identifier
      * 
-     * @param   string
      * @author  sbebbington
      * @date    14 Feb 2018 22:44:08
      * @return  array
      * @throws  FrameworkException
      */
-    public function getContent($conditional = null){
-        $query    = "SELECT `title`, `class`, `content` FROM `{$this->db}`.`{$this->table}`";
-        if(!empty($conditional)){
-            $query .= " WHERE `id`=?";
-        }
-        $query .= ";";
-        return $this->execute($this->connection->prepare($query), [$conditional], empty($conditional));
+    public function getContent(){
+        $query  = "SELECT `title`, `class`, `content` FROM `{$this->db}`.`{$this->table}` ORDER BY UNIX_TIMESTAMP(`updated`) DESC;";
+        return $this->execute($this->connection->prepare($query), [], true);
     }
 }

@@ -25,18 +25,24 @@ class EntriesController extends ControllerCore
     /**
      * Sets page view object
      * 
+     * @author  Shaun B
+     * @date    2018-02-17 12:49:17
      * @return  void
      */
     public function setView(){
-        $this->view->header = $this->getHeader();
-        $this->view->subHeader = $this->getSubHeader();
-        $this->view->content = $this->getContent();
+        $this->view->header     = $this->getHeader();
+        $this->view->subHeader  = $this->getSubHeader();
+        $this->view->content    = $this->getContent();
         if(empty($this->view->hrClasses)){
             $this->view->hrClasses = $this->getHRClasses();
         }
     }
     
     /**
+     * Returns the page view content
+     * 
+     * @author  Shaun B
+     * @date    2018-02-17 12:50:20
      * @return string
      */
     public function getHeader(){
@@ -44,13 +50,21 @@ class EntriesController extends ControllerCore
     }
     
     /**
-     * @return string
+     * Returns the page sub header text
+     * 
+     * @author  Shaun B
+     * @date    2018-02-17 13:13:23
+     * @return  string
      */
     public function getSubHeader(){
         return $this->subHeader;
     }
     
     /**
+     * Prepares the page content ready for the view
+     * 
+     * @author  Shaun B
+     * @date    2018-02-17 13:14:26
      * @return  array
      */
     public function getContent(){

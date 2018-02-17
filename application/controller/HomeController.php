@@ -28,15 +28,36 @@ class HomeController extends ControllerCore
         $this->view->content    = $this->getContent();
     }
     
+    /**
+     * Returns page header text
+     * 
+     * @author  Shaun B
+     * @date    17 Feb 2018 13:35:03
+     * @return  string
+     */
     public function getHeader(){
         return $this->sql->getHeader();
     }
     
+    /**
+     * Gets the page sub header
+     * 
+     * @author  Shaun B
+     * @date    17 Feb 2018 14:42:56
+.    * @return  string
+     */
     public function getSubHeader(){
         return $this->sql->getSubHeader();
     }
     
+    /**
+     * Gets the page content
+     * 
+     * @author  Shaun B
+     * @date    17 Feb 2018 14:49:59
+     * @return  array
+     */
     public function getContent(){
-        return json_decode($this->sql->getContent('content'), true);
+        return json_decode($this->sql->getContent(), true);
     }
 }
