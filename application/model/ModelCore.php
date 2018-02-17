@@ -132,7 +132,7 @@ class ModelCore
         $trace  = debug_backtrace();
         $caller = $trace[1];
         
-        if(empty($query) || empty($parameters)){
+        if(empty($query)){
             throw new FrameworkException(
                 "PDO execution called without valid query or parameters",
                 0x07,

@@ -64,12 +64,6 @@ class Core extends HtmlBuilder
         $this->root         = str_replace("\\", "/", $_SERVER['DOCUMENT_ROOT']);
         $this->controller   = new stdClass();
         $this->flash        = new stdClass();
-        $this->partial      = array(
-            'header'    => (file_exists(serverPath("/view/partial/header.phtml"))) ? serverPath("/view/partial/header.phtml") : '',
-            'footer'    => (file_exists(serverPath("/view/partial/footer.phtml"))) ? serverPath("/view/partial/footer.phtml") : '',
-            'navbar'    => (file_exists(serverPath("/view/partial/navbar.phtml"))) ? serverPath("/view/partial/navbar.phtml") : '',
-            'hrcolours' => (file_exists(serverPath("/view/partial/hrcolours.phtml"))) ? serverPath("/view/partial/hrcolours.phtml") : '',
-        );
     }
     
     /**
@@ -79,14 +73,17 @@ class Core extends HtmlBuilder
      * Note that allowedSegments and pageControllers
      * are required settings
      * 
-     * @param   na
+     * Additionally, it will now set page partial views
+     * to switch off, send false as a parameter
+     * 
+     * @param   bool
      * @author  sbebbington
      * @date    28 Jul 2017 14:29:45
      * @version 0.1.5-RC2
      * @return  boolean
      * @throws  FrameworkException
      */
-    protected function setSiteConfiguration(){
+    protected function setSiteConfiguration(bool $setPagePartialViews = true){
         if(!file_exists(serverPath('/config/pages.json'))){
             return false;
         }
@@ -96,6 +93,14 @@ class Core extends HtmlBuilder
         $this->errorReporting   = $siteConfiguration['errorReporting'] ?? [];
         $this->allowedFileExts  = $siteConfiguration['allowedFileExts'] ?? [];
         $this->ignoredExts      = $siteConfiguration['ignotedFileExts'] ?? ['js', 'css'];
+        
+        if($setPagePartialViews === true){
+            foreach($siteConfiguration['partialViews'] as $key => $data){
+                if(file_exists(serverPath($data))){
+                    $this->partial[$key]    =   serverPath($data);
+                }
+            }
+        }
         
         if(!empty($this->allowedSegments) && !empty($this->pageController)){
             return true;
@@ -118,6 +123,9 @@ class Core extends HtmlBuilder
         if(in_array($this->host, $this->errorReporting)){
             error_reporting(-1);
             ini_set('display_errors', '1');
+        }else{
+            error_reporting(0);
+            ini_set('display_errors', '0');
         }
     }
     
