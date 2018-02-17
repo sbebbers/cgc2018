@@ -24,13 +24,9 @@ class ReviewsModel extends ModelCore
      * @throws  FrameworkException
      */
     public function getContent($conditional = null){
-        $query    = "SELECT `title`, `sub_header`, `developer`, `mega_game`, `content`, `file_name`, `alt` "
+        $query    = "SELECT `title`, `sub_header`, `developer`, `mega_game`, `content`, `file_name`, `alt`,  "
             . "`summary`, `graphics`, `playability`, `addictiveness`, `total`, `sundry` "
-            . "FROM `{$this->db}`.`{$this->table}`";
-        if(!empty($conditional)){
-            $query .= " WHERE `id`=?";
-        }
-        $query .= ";";
-        return $this->execute($this->connection->prepare($query), [$conditional], empty($conditional));
+            . "FROM `{$this->db}`.`{$this->table}`;";
+        return $this->execute($this->connection->prepare($query), [], true);
     }
 }
