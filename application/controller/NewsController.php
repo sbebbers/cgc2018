@@ -73,7 +73,7 @@ class NewsController extends ControllerCore
         foreach($this->sql->getContent() as $key => $data){
             $content[$key]['title'] = $data['title'];
             $content[$key]['class'] = $data['class'];
-            $content[$key]['description'] = json_decode($data['content'], true);
+            $content[$key]['content'] = json_decode($data['content'], true);
         }
         return $content;
     }

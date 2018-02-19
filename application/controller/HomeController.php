@@ -23,8 +23,8 @@ class HomeController extends ControllerCore
      * @return  void
      */
     public function setView(){
-        $this->view->header     = $this->getHeader();
-        $this->view->subHeader  = $this->getSubHeader();
+        $this->view->header     = $this->getHeader() ?? 'Crap Games Competition 2018';
+        $this->view->subHeader  = $this->getSubHeader()?? 'Welcome to the 2018 Crap Games Competition';
         $this->view->content    = $this->getContent();
     }
     

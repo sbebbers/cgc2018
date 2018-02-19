@@ -27,7 +27,7 @@
             $hrDirection = 1;
             foreach($this->content as $key => $newsItem):
                 $this->h(4, $newsItem['title'], "news-item-{$key}", $newsItem['class']);
-                foreach($newsItem['description'] as $text):
+                foreach($newsItem['content'] as $text):
                     $this->p()->id("news-item-{$key}")->closeElement()->text($text)->close("p");
                 endforeach;
                 include($this->partial['hrcolours']);
