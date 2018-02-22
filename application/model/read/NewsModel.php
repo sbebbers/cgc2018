@@ -23,7 +23,7 @@ class NewsModel extends ModelCore
      * @throws  FrameworkException
      */
     public function getContent(){
-        $query  = "SELECT `title`, `class`, `content` AS `description` FROM `{$this->db}`.`{$this->table}` ORDER BY UNIX_TIMESTAMP(`updated`) DESC;";
+        $query  = "SELECT `title`, `class`, `content` FROM `{$this->db}`.`{$this->table}` ORDER BY UNIX_TIMESTAMP(`updated`) DESC;";
         return $this->execute($this->connection->prepare($query), [], true);
     }
 }
