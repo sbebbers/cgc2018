@@ -132,7 +132,7 @@ class ModelCore
         $trace  = debug_backtrace();
         $caller = $trace[1];
         
-        if(empty($query) || empty($parameters)){
+        if(empty($query)){
             throw new FrameworkException(
                 "PDO execution called without valid query or parameters",
                 0x07,
@@ -162,5 +162,24 @@ class ModelCore
                 )
             );
         }
+    }
+    
+    /**
+     * Gets the current page count
+     * 
+     * @param   string, string
+     * @author	Shaun B
+     * @date	16 Feb 2018 10:22:23
+     * @return	array
+     * @throws  FrameworkException
+     */
+    public function getPageCount(string $page = 'home', string $type = 'live'){
+        $query    = "SELECT `id`, `{$page}` FROM `{$this->db}`.`{$this->tables->page_counts}` WHERE `type` = ?;";
+        return $this->execute($this->connection->prepare($query), [$type]);
+    }
+    
+    
+    public function setPageCount(){
+        
     }
 }

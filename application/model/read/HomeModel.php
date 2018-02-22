@@ -2,6 +2,7 @@
 namespace Application\Model\Read;
 
 use Application\Model\ModelCore;
+use Application\Core\FrameworkException\FrameworkException;
 
 require_once(serverPath("/model/ModelCore.php"));
 
@@ -16,15 +17,39 @@ class HomeModel extends ModelCore
     /**
      * Gets the generic view stuff
      * 
-     * @param   [string]
+     * @param   string
      * @author  sbebbington
      * @date    24 Oct 2017 15:50:08
-     * @version 0.1.5-RC2
-     * @return  array
+     * @return  string
+     * @throws  FrameworkException
      */
-    public function getContent($colName = 'home'){
-        $query    = "SELECT `header`, `sub_header`, `content` FROM `{$this->db}`.`{$this->table}` "
-            . "WHERE `name`=?;";
-        return $this->execute($this->connection->prepare($query), [$colName]);
+    public function getContent(string $colName = 'content'){
+        if(empty($colName) || !in_array($colName, ['header','sub_header','content'])){
+            return '';
+        }
+        $query    = "SELECT `header`, `sub_header`, `content` FROM `{$this->db}`.`{$this->table}`;";
+        return $this->execute($this->connection->prepare($query))[$colName];
+    }
+    
+    /**
+     * Returns the content for the page header
+     * 
+     * @author  Shaun B
+     * @date    2018-02-17 12:30:05
+     * @return string
+     */
+    public function getHeader(){
+        return $this->getContent('header');
+    }
+    
+    /**
+     * Returns the content for the page sub header
+     * 
+     * @author  Shaun B
+     * @date    2018-02-17 12:32:08
+     * @return  string
+     */
+    public function getSubHeader(){
+        return $this->getContent('sub_header');
     }
 }

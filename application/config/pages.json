@@ -38,5 +38,11 @@
 		"5":			"ico",
 		"6":			"pdf",
 		"7":			"zip"
+	},
+	"partialViews":{
+		"header":		"/view/partial/header.phtml",
+        "footer":		"/view/partial/footer.phtml",
+        "navbar":		"/view/partial/navbar.phtml",
+        "hrcolours":	"/view/partial/hrcolours.phtml"
 	}
 }

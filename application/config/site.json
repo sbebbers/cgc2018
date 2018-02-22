@@ -4,7 +4,7 @@
 	"cookieDomain": "cgc2018.local",
 	"uriPath": "/",
 	"loadCoreController": true,
-	"version": "1.0",
+	"version": "1.1.0",
 	"rc": true,
 	"dev": true,
 	"mode": "test",

@@ -1,0 +1,8 @@
+<?php 
+$hrClass = $this->hrClasses[$hrCounter];
+$hrCounter += $hrDirection;
+if($hrCounter > 6 || $hrCounter < 2):
+    $hrDirection =- $hrDirection;
+endif;
+$this->open("hr", '', ["{$hrClass}", "clearfix"], true);
+?>

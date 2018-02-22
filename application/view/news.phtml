@@ -23,12 +23,14 @@
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header")
         ->open("div", "news", "container");
+            $hrCounter = 1;
+            $hrDirection = 1;
             foreach($this->content as $key => $newsItem):
                 $this->h(4, $newsItem['title'], "news-item-{$key}", $newsItem['class']);
-                foreach($newsItem['description'] as $text):
-                    $this->p()->id("news-item-{$key}")->closeElement()->text($text)->close("p");
+                foreach($newsItem['content'] as $text):
+                    $this->p()->closeElement()->text($text)->close("p");
                 endforeach;
-                $this->open("hr", '', "clearfix", true);
+                include($this->partial['hrcolours']);
             endforeach;
         $this->close("div");
     require_once("{$this->partial['footer']}");
