@@ -22,7 +22,7 @@
 
         $this->h(1, $this->header, "header")
         ->h(3, $this->subHeader, "sub_header");
-        $this->open("hr", '', "clearfix", true);
+        $this->p()->closeElement()->close("p");
         $hrCounter = 1;
         $hrDirection = 1;
         foreach($this->content as $key => $entry):

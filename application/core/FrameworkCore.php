@@ -122,10 +122,10 @@ class Core extends HtmlBuilder
         $this->host = getConfig('baseURL') . getConfig("uriSegments");
         if(in_array($this->host, $this->errorReporting)){
             error_reporting(-1);
-            ini_set('display_errors', '1');
+            ini_set('display_errors', 'On');
         }else{
             error_reporting(0);
-            ini_set('display_errors', '0');
+            ini_set('display_errors', 'Off');
         }
     }
     
