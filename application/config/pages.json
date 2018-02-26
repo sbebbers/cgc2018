@@ -6,7 +6,8 @@
 		"Reviews":		"reviews",
 		"Challenges":	"challenges",
 		"Rules":		"rules",
-		"Results":		"results"
+		"Results":		"results",
+		"WP-Admin":		"wp-admin"
 	},
 	"pageController":{
 		"Home": 		"HomeController",
@@ -15,7 +16,8 @@
 		"Reviews":		"ReviewsController",
 		"Challenges":	"ChallengesController",
 		"Rules":		"RulesController",
-		"Results":		"ResultsController"
+		"Results":		"ResultsController",
+		"wp-admin":		"AdminController"
 	},
 	"errorReporting":{
 		"0":			"http://cgc2018.local",
