@@ -15,7 +15,7 @@ pre{font-family:monospace,monospace;font-size:1em}
 a{background-color:transparent;-webkit-text-decoration-skip:objects}
 a:active,a:hover{outline-width:0}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
-b,strong{font-weight:inherit;font-weight:700}
+b,strong,.strong{font-weight:inherit;font-weight:700}
 code,kbd,samp{font-family:monospace,monospace;font-size:1em}
 dfn{font-style:italic}
 mark{background-color:#ff0;color:#000}

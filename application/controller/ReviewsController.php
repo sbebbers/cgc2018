@@ -30,6 +30,7 @@ class ReviewsController extends ControllerCore
         $this->view->header = $this->getHeader();
         $this->view->subHeader = $this->getSubHeader();
         $this->view->content = $this->getContent();
+        $this->view->tableOfContents = $this->getTableOfContents();
 	}
     
     public function getHeader(){
@@ -42,7 +43,9 @@ class ReviewsController extends ControllerCore
     
     public function getContent(){
         $content = array();
-        foreach($this->sql->getContent() as $key => $data){
+        $contents = $this->sql->getContent();
+        
+        foreach($contents as $key => $data){
 			$content[$key]['title'] = $data['title'];
             $content[$key]['sub-header'] = $data['sub_header'];
 			if(!empty($data['developer'])){
@@ -68,5 +71,16 @@ class ReviewsController extends ControllerCore
             );
 		}
         return $content;
+    }
+    
+    public function getTableOfContents(){
+        $returnValues = array();
+        $tableOfContents = $this->sql->getTableOfContents();
+        
+        foreach($tableOfContents as $key => $data){
+            $_data = $this->lib->convertToHtmlId($data['title']);
+            $returnValues[$_data] = $data['title'];
+        }
+        return $returnValues;
     }
 }
