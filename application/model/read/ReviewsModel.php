@@ -29,4 +29,17 @@ class ReviewsModel extends ModelCore
             . "FROM `{$this->db}`.`{$this->table}`;";
         return $this->execute($this->connection->prepare($query), [], true);
     }
+    
+    /**
+     * Gets the game titles only
+     * 
+     * @author  sbebbington
+     * @date    18 Mar 2018 18:31:13
+     * @return  array
+     * @throws  FrameworkException
+     */
+    public function getTableOfContents(){
+        $query  = "SELECT `title` FROM `{$this->db}`.`{$this->table}`;";
+        return $this->execute($this->connection->prepare($query), [], true);
+    }
 }

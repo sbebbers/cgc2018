@@ -64,7 +64,8 @@ strike,.strike{text-decoration:line-through}
 .nav-items > li .rainbow .colour.yellow{background-color:#ff0}
 .nav-items > li .rainbow .colour.green{background-color:#0f0}
 .nav-items > li .rainbow .colour.blue{background-color:#00f}
-.clapometer{margin:8px -8px 16px;border-bottom:2px solid #CC0;align-content:center;text-align:center;padding:0 0 8px;font-weight:900}
+.clapometer{margin:8px -8px 16px;border-bottom:2px solid #cc0;align-content:center;text-align:center;padding:0 0 8px;font-weight:900}
+.table-of-contents-link{margin-left:-16px;padding-bottom:4px}
 @media only screen and (min-width:0px){
 	.col-xs-1{width:8.3333333334%}
 	.col-xs-2{width:16.6666666667%}

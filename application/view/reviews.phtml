@@ -22,8 +22,32 @@
         endif;
 
         $this->h(1, $this->header, "header")->h(3, $this->subHeader, "sub_header");
+        
+        $this->p()->id("table-of-contents")->addClass(array("col-xs-12", "h3", "clearfix", "ink-bright-red"))->closeElement()
+            ->text("Table of Contents")
+        ->close("p");
+        
+        $this->p()->addClass(array("col-xs-12", "h5", "clearfix", "ink-bright-yellow"))->closeElement()
+            ->text("Click to select the review to the game the you want to read.")
+        ->close("p");
+        
+        $this->open("div", "", array("col-xs-12", "clearfix"));
+            $this->open("ul", '', array("unstlyed"));
+            foreach($this->tableOfContents as $id => $name):
+                $this->open("li", "", "clearfix");
+                    $this->a('', "#{$id}", '', '', 'strong ink-bright-green clearfix table-of-contents-link', '' , true)
+                        ->text("&raquo;&nbsp;{$name}")
+                    ->close("a");
+                $this->close("li");
+            endforeach;
+            $this->close("ul");
+        $this->close("div");
+        
         $hrCounter = 1;
         $hrDirection = 1;
+        
+        include($this->partial['hrcolours']);
+        
         foreach($this->content as $content):
             $this->p()->id($this->lib->convertToHtmlId("{$content['title']}"))->addClass("h2")->closeElement()->text($content['title'])->close("p");
             $this->p()->addClass(array("h3", "ink-cyan"))->closeElement()->text("In a nut-shell: {$content['sub-header']}")->close("p");
