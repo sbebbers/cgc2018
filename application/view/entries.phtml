@@ -29,7 +29,7 @@
             $this->h(4, "{$key}.&nbsp;{$entry['title']}", $this->lib->convertToHtmlId("{$entry['title']}"));
             $this->p()->closeElement()->text("<span class=\"ink-bright-red\">Format details:</span> {$entry['format']}")->close("p");
             $this->p()->addClass("col-xs-12 col-md-4")->closeElement()
-                ->text("<a href=\"{$entry['download']}\" rel=\"nofollow\">")
+                ->text("<a href=\"{$entry['download']}\" title=\"Click here to download {$entry['title']}\" rel=\"nofollow\">")
                     ->img(
                         "",
                         "{$entry['screen-shot']['location']}{$entry['screen-shot']['file-name']}",

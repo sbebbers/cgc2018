@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /application/
 Disallow: /logs/
 sitemap: https://cgc.source.run/sitemap.xml
+humans: https://cgc.source.run/humans.txt
