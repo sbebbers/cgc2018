@@ -24,13 +24,13 @@ class ReviewsController extends ControllerCore
         if(empty($this->view->hrClasses)){
             $this->view->hrClasses = $this->getHRClasses();
         }
-    }
+	}
     
     public function setView(){
         $this->view->header = $this->getHeader();
         $this->view->subHeader = $this->getSubHeader();
         $this->view->content = $this->getContent();
-    }
+	}
     
     public function getHeader(){
         return $this->header;
@@ -43,10 +43,12 @@ class ReviewsController extends ControllerCore
     public function getContent(){
         $content = array();
         foreach($this->sql->getContent() as $key => $data){
-            $content[$key]['title'] = $data['title'];
+			$content[$key]['title'] = $data['title'];
             $content[$key]['sub-header'] = $data['sub_header'];
-            $cohtent[$key]['developer'] = $data['developer'];
-            $content[$key]['yawn-sinclair-mega-game'] = $data['mega_game'];
+			if(!empty($data['developer'])){
+				$content[$key]['developer'] = $data['developer'];
+			}
+            $content[$key]['yawn-sinclair-mega-game'] = (int)$data['mega_game'];
             $content[$key]['content'] = json_decode($data['content'], true);
             $content[$key]['screen-shot'] = array(
                 'location' => '/img/',
@@ -64,7 +66,7 @@ class ReviewsController extends ControllerCore
                 'total' => $data['total'],
                 'sundry' => json_decode($data['sundry'], true),
             );
-        }
+		}
         return $content;
-    }    
+    }
 }

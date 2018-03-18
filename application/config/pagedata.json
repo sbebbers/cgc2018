@@ -1,26 +1,26 @@
 {
 	"titles":{
 		"home":			"Ever wanted to make a ZX Spectrum game? Do your worst... really!",
-		"news":			"Sinclair ZX Crap Games Competition 2018 news",
-		"entries":		"List of crap game entries",
-		"reviews":		"Entries so far, with indepth analysis",
-		"challenges":	"Want a challenge? Well, here's the place to look",
-		"rules":		"Our crap games rules for your entries",
-		"results":		"Here are the winners and losers of this year's Crap Games Competition"
+		"news":			"Sinclair ZX Crap Games Competition 2018 news. Get the latest info here.",
+		"entries":		"List of crap game entries. Click on the relevant image to download the relevant item.",
+		"reviews":		"Entries so far, with in-depth analysis.",
+		"challenges":	"Want a challenge? Well, here's the place to look.",
+		"rules":		"Our crap games rules for your entries.",
+		"results":		"Here are the winners and losers of this year's Crap Games Competition."
 	},
 	"descriptions":{
-		"home":			"Welcome to the 2018 Crap Games Competition, supported by Retro Games Ltd",
-		"news":			"Find out the latest entries, challenges, and other up-to-the-moment (nearly) news",
-		"entries":		"Here be all of the entries for the 2018 Crap Games Competition",
-		"reviews":		"Yikes! I never knew there was so much in it",
-		"challenges":	"How low can you go? Take a crap games challenge",
-		"rules":		"10 rules to obey about this year's competition",
+		"home":			"Welcome to the 2018 Crap Games Competition, supported by Retro Games Ltd.",
+		"news":			"Find out the latest entries, challenges, and other up-to-the-moment (nearly) news.",
+		"entries":		"Here be all of the entries for the 2018 Sinclair Crap Games Competition.",
+		"reviews":		"Yikes! I never knew there was so much in it.",
+		"challenges":	"How low can you go? Take a crap games challenge.",
+		"rules":		"10 rules to obey about this year's competition.",
 		"results":		"Drum roll please!"
 	},
 	"metaData":{
 		"default":{
 			"author":	"Shaun Bebbington, James Sabin",
-			"twitter":	"@YearOfCodes"
+			"twitter":	"@CSSCGC2018"
 		}
 	}
 }

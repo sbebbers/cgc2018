@@ -6,8 +6,7 @@
 		"Reviews":		"reviews",
 		"Challenges":	"challenges",
 		"Rules":		"rules",
-		"Results":		"results",
-		"WP-Admin":		"wp-admin"
+		"Results":		"results"
 	},
 	"pageController":{
 		"Home": 		"HomeController",
@@ -16,8 +15,7 @@
 		"Reviews":		"ReviewsController",
 		"Challenges":	"ChallengesController",
 		"Rules":		"RulesController",
-		"Results":		"ResultsController",
-		"wp-admin":		"AdminController"
+		"Results":		"ResultsController"
 	},
 	"errorReporting":{
 		"0":			"http://cgc2018.local",
@@ -39,9 +37,11 @@
 		"4":			"gif",
 		"5":			"ico",
 		"6":			"pdf",
-		"7":			"zip"
+		"7":			"jpg",
+		"8":			"txt",
+		"9":			"xml"
 	},
-	"partialViews":{
+		"partialViews":{
 		"header":		"/view/partial/header.phtml",
         "footer":		"/view/partial/footer.phtml",
         "navbar":		"/view/partial/navbar.phtml",
