@@ -67,16 +67,16 @@
             endif;
             
             $this->open("div", '', array("col-xs-12", "col-md-6", "pull-left"));
-            $this->open("p", '', "review-screen-shot");
-                $this->img(
-                    "",
-                    "{$content['screen-shot']['location']}{$content['screen-shot']['file-name']}",
-                    "{$content['screen-shot']['width']}",
-                    "{$content['screen-shot']['height']}",
-                    "{$content['screen-shot']['alt']}",
-                    "{$content['screen-shot']['class']} review-screen-shot"
-                );
-            $this->close("p");
+                $this->open("p", '', "review-screen-shot");
+                    $this->img(
+                        "",
+                        "{$content['screen-shot']['location']}{$content['screen-shot']['file-name']}",
+                        "{$content['screen-shot']['width']}",
+                        "{$content['screen-shot']['height']}",
+                        "{$content['screen-shot']['alt']}",
+                        "{$content['screen-shot']['class']} review-screen-shot"
+                    );
+                $this->close("p");
             $this->close("div");
             
             foreach($content['cgc-clapometer'] as $key => $ratings):
@@ -104,6 +104,7 @@
             endforeach;
             
             if($clapOMeterBox === true):
+                $this->p()->addClass(array("col-xs-6", "pull-right"))->closeElement()->text('<a href="#" title="Back to top" class="ink-bright-yellow pull-right back-to-top strong">/\ Back to top</a>')->close("p");
                 $this->close("div");
                 $clapOMeterBox = false;
                 include($this->partial['hrcolours']);
