@@ -53,7 +53,7 @@
             $this->p()->addClass(array("h3", "ink-cyan"))->closeElement()->text("In a nut-shell: {$content['sub-header']}")->close("p");
             $this->p()->addClass(array("h5", "ink-cyan"))->closeElement()->text("Developer: {$content['developer']}")->close("p");
             
-            if($content['yawn-sinclair-mega-game'] === true):
+            if($content['yawn-sinclair-mega-game'] === 1):
                 $this->p()->addClass(array("h4", "ink-red"))->closeElement()->text("Yawn Sinclair MegaGame");
             endif;
             
