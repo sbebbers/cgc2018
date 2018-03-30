@@ -4,6 +4,7 @@
 		"News":			"news",
 		"Entries":		"entries",
 		"Reviews":		"reviews",
+		"CGCAdventures":"cgcadventures",
 		"Challenges":	"challenges",
 		"Rules":		"rules",
 		"Results":		"results"
@@ -13,6 +14,7 @@
 		"News":			"NewsController",
 		"Entries":		"EntriesController",
 		"Reviews":		"ReviewsController",
+		"CGCAdventures":"AdventuresController",
 		"Challenges":	"ChallengesController",
 		"Rules":		"RulesController",
 		"Results":		"ResultsController"
