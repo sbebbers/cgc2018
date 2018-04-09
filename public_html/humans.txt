@@ -1,14 +1,14 @@
 /* TEAM */
-Your title: Shaun Bebbington, James Sabin
+Top team: Shaun Bebbington, James Sabin, Lisa Allcock
 Site: https://cgc.source.run/
 Twitter: @CSSCGC2018
-Location: Birmingham, United Kingdom of Great Britain and Northern Ireland.
+Location: Birmingham, West Midlands, United Kingdom of Great Britain and Northern Ireland.
 
 /* THANKS */
 Name: Paul Andrews
 
 /* SITE */
-Last update: 2018/02/23 
+Last update: 2018/04/09
 Standards: HTML5, CSS3
 Components: jQuery
-Software: Eclipse, NotePad++
+Software: Eclipse for PHP Developers, NotePad++, deffo not Sublime Text as it's a bit crap
