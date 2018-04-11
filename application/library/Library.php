@@ -64,7 +64,7 @@ class Library
     }
     
     /**
-     * Returns current version of the framework
+     * Returns current site version
      *
      * @param   na
      * @author  sbebbington B
@@ -75,12 +75,12 @@ class Library
      *          version
      */
     public function version(){
-        return '1.0.0';
+        return '1.1.0';
     }
     
     /**
      * Is it Easter yet?
-     * Try <?phpecho $this->controllerInstance->libraryInstance->easterEgg(); ?> in your view
+     * Try <?php echo $this->controllerInstance->libraryInstance->easterEgg(); ?> in your view
      * 
      * @param   na
      * @author  sbebbington B
