@@ -32,7 +32,12 @@
         ->close("p");
         
         $this->open("div", "", array("col-xs-12", "clearfix"));
-            $this->open("ul", '', array("unstlyed"));
+            $this->open("ul", '', array("unstlyed"))
+            ->open("li", "", "clearfix")
+                ->a('', "{$this->host}/reviews", '', '', 'strong ink-bright-green clearfix table-of-contents-link', '' , true)
+                    ->text("&laquo;&nbsp;EXIT")
+                ->close("a")
+            ->close("li");
             foreach($this->tableOfContents as $id => $name):
                 $this->open("li", "", "clearfix");
                     $this->a('', "#{$id}", '', '', 'strong ink-bright-green clearfix table-of-contents-link', '' , true)
