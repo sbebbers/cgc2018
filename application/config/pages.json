@@ -1,20 +1,20 @@
 {
 	"allowedSegments":{
+		"CGC-Adventures": "cgc-adventures",
 		"Home": 		"home",
 		"News":			"news",
 		"Entries":		"entries",
 		"Reviews":		"reviews",
-		"CGCAdventures":"cgcadventures",
 		"Challenges":	"challenges",
 		"Rules":		"rules",
 		"Results":		"results"
 	},
 	"pageController":{
+		"CGC-Adventures": "AdventuresController",
 		"Home": 		"HomeController",
 		"News":			"NewsController",
 		"Entries":		"EntriesController",
 		"Reviews":		"ReviewsController",
-		"CGCAdventures":"AdventuresController",
 		"Challenges":	"ChallengesController",
 		"Rules":		"RulesController",
 		"Results":		"ResultsController"
@@ -43,7 +43,7 @@
 		"8":			"txt",
 		"9":			"xml"
 	},
-		"partialViews":{
+	"partialViews":{
 		"header":		"/view/partial/header.phtml",
         "footer":		"/view/partial/footer.phtml",
         "navbar":		"/view/partial/navbar.phtml",

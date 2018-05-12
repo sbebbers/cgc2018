@@ -17,29 +17,32 @@ class ReviewsModel extends ModelCore
     /**
      * Returns content based on the Numeral identifier
      * 
-     * @param   string
+     * @param   string $gameType
      * @author  sbebbington
-     * @date    14 Feb 2018 22:44:08
+     * @date    7 May 2018 16:02:45
      * @return  array
      * @throws  FrameworkException
      */
-    public function getContent($conditional = null){
-        $query    = "SELECT `title`, `sub_header`, `developer`, `mega_game`, `content`, `file_name`, `alt`,  "
+    public function getContent(string $gameType = '0'){
+        $query    = "SELECT `title`, `sub_header` AS `sub-header`, "
+            . "`developer`, `mega_game` AS `yawn-sinclair-mega-game`, "
+            . "`content`, `file_name` AS `file-name`, `alt`,  "
             . "`summary`, `graphics`, `playability`, `addictiveness`, `total`, `sundry` "
-            . "FROM `{$this->db}`.`{$this->table}`;";
+            . "FROM `{$this->db}`.`{$this->table}` WHERE `game_type`='{$gameType}';";
         return $this->execute($this->connection->prepare($query), [], true);
     }
     
     /**
      * Gets the game titles only
      * 
+     * @param   string $gameType
      * @author  sbebbington
-     * @date    18 Mar 2018 18:31:13
+     * @date    7 May 2018 16:00:27
      * @return  array
      * @throws  FrameworkException
      */
-    public function getTableOfContents(){
-        $query  = "SELECT `title` FROM `{$this->db}`.`{$this->table}`;";
+    public function getTableOfContents(string $gameType = '0'){
+        $query  = "SELECT `title` FROM `{$this->db}`.`{$this->table}` WHERE `game_type`='{$gameType}';";
         return $this->execute($this->connection->prepare($query), [], true);
     }
 }

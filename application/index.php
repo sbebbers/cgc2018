@@ -1,0 +1,1 @@
+<?php header("Location: https://cgc.source.run/", true, 301); exit(); ?>

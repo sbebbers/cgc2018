@@ -233,12 +233,6 @@ function writeToLogFile($error = []){
     $logPath    = logErrorPath("/{$dirName}");
     $fileName   = "{$logPath}/{$fileNames[2]}.log";
     
-    if(!is_dir(logErrorPath())){
-        if(!mkdir(logErrorPath(), 0755)){
-            throw new Exception("Filepath " . logErrorPath() . " could not be created", 0xf17e);
-        }
-    }
-    
     if(!is_dir($logPath)){
         if(!mkdir($logPath, 0755)){
             throw new Exception("Filepath {$logPath} could not be created", 0xf17e);
@@ -247,9 +241,7 @@ function writeToLogFile($error = []){
     $error  = json_encode($error);
     
     if(!file_exists($fileName)){
-        if(!file_put_contents($fileName, "")){
-            throw new Exception("File {$fileName} could not be created", 0xf17e);
-        }
+        $file = fwrite($fileName, "");
     }
     return file_put_contents($fileName, $error . PHP_EOL, FILE_APPEND | LOCK_EX) ?? false;
 }

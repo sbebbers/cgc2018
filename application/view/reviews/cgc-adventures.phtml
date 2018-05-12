@@ -23,25 +23,34 @@
 
         $this->h(1, $this->header, "header")->h(3, $this->subHeader, "sub_header");
         
-        $this->p()->id("table-of-contents")->addClass(array("col-xs-12", "h3", "clearfix", "ink-bright-red"))->closeElement()
-            ->text("Table of Contents")
-        ->close("p");
+        if(!empty($this->tableOfContents)):
+            $this->p()->id("table-of-contents")->addClass(array("col-xs-12", "h3", "clearfix", "ink-bright-red"))->closeElement()
+                ->text("Table of Contents")
+            ->close("p");
         
-        $this->p()->addClass(array("col-xs-12", "h5", "clearfix", "ink-bright-yellow"))->closeElement()
-            ->text("Click to select the review to the game the you want to read.")
-        ->close("p");
-        
-        $this->open("div", "", array("col-xs-12", "clearfix"));
-            $this->open("ul", '', array("unstlyed"));
-            foreach($this->tableOfContents as $id => $name):
-                $this->open("li", "", "clearfix");
-                    $this->a('', "#{$id}", '', '', 'strong ink-bright-green clearfix table-of-contents-link', '' , true)
-                        ->text("&raquo;&nbsp;{$name}")
-                    ->close("a");
-                $this->close("li");
-            endforeach;
-            $this->close("ul");
-        $this->close("div");
+            $this->p()->addClass(array("col-xs-12", "h5", "clearfix", "ink-bright-yellow"))->closeElement()
+                ->text("Click to select the review to the game the you want to read.")
+            ->close("p");
+            
+            $this->open("div", "", array("col-xs-12", "clearfix"));
+                $this->open("ul", '', array("unstlyed"));
+                foreach($this->tableOfContents as $id => $name):
+                    $this->open("li", "", "clearfix");
+                        $this->a('', "#{$id}", '', '', 'strong ink-bright-green clearfix table-of-contents-link', '' , true)
+                            ->text("&raquo;&nbsp;{$name}")
+                        ->close("a");
+                    $this->close("li");
+                endforeach;
+                $this->close("ul");
+            $this->close("div");
+        else:
+            $this->p()->id("table-of-contents")->addClass(array("col-xs-12", "h3", "clearfix", "ink-bright-red"))->closeElement()
+                ->text("Yikes! There's nothing here yet. Please try back later.")
+            ->close("p");
+            $this->p()->id("go-back")->addClass(array("col-xs-12", "h4", "clearfix"))->closeElement()
+                ->a("", "/reviews.html", "", "", "table-of-contents-link")->text("&laquo; Back to reviews")->close("a")
+            ->close("p");
+        endif;
         
         $hrCounter = 1;
         $hrDirection = 1;
