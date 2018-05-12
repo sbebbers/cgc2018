@@ -32,12 +32,7 @@
         ->close("p");
         
         $this->open("div", "", array("col-xs-12", "clearfix"));
-            $this->open("ul", '', array("unstlyed"))
-            ->open("li", "", "clearfix")
-                ->a('', "{$this->host}/reviews/cgcadventures", '', '', 'strong ink-bright-green clearfix table-of-contents-link', '' , true)
-                    ->text("&raquo;&nbsp;CGC Adventures (Yarr!)")
-                ->close("a")
-            ->close("li");
+            $this->open("ul", '', array("unstlyed"));
             foreach($this->tableOfContents as $id => $name):
                 $this->open("li", "", "clearfix");
                     if($id == 'cgc-adventures'):
