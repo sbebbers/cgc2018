@@ -1,18 +1,20 @@
 {
 	"titles":{
+		"cgc-adventures": "Welcome to our dedicated adventures section. Yarr!",
 		"home":			"Ever wanted to make a ZX Spectrum game? Do your worst... really!",
-		"news":			"Sinclair Crap Games Competition 2018 news. Get the latest info here.",
-		"entries":		"List of crap game entries. Click on the relevant image to download the related game, application, utility or other softwares.",
-		"reviews":		"Entries so far for the Sinclair CGC 2018, with in-depth analysis.",
+		"news":			"Sinclair ZX Crap Games Competition 2018 news. Get the latest info here.",
+		"entries":		"List of crap game entries. Click on the relevant image to download the relevant item.",
+		"reviews":		"Entries so far, with in-depth analysis.",
 		"challenges":	"Want a challenge? Well, here's the place to look.",
-		"rules":		"Our crap games rules for your entries. If you don't like 'em then Mrs Yates will sort you out.",
+		"rules":		"Our crap games rules for your entries.",
 		"results":		"Here are the winners and losers of this year's Crap Games Competition."
 	},
 	"descriptions":{
-		"home":			"Welcome to the Sinclair Crap Games Competition 2018, supported by Retro Games Ltd.",
+		"cgc-adventures": "Here layeth ye crappest of adventures.",
+		"home":			"Welcome to the 2018 Crap Games Competition, supported by Retro Games Ltd.",
 		"news":			"Find out the latest entries, challenges, and other up-to-the-moment (nearly) news.",
-		"entries":		"Here be all of the entries for the 2018 Sinclair Crap Games Competition. If you see Sid, don't tell him.",
-		"reviews":		"John Kettley.",
+		"entries":		"Here be all of the entries for the 2018 Sinclair Crap Games Competition.",
+		"reviews":		"Yikes! I never knew there was so much in it.",
 		"challenges":	"How low can you go? Take a crap games challenge.",
 		"rules":		"10 rules to obey about this year's competition.",
 		"results":		"Drum roll please!"
