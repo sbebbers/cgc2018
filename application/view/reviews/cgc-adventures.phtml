@@ -42,15 +42,15 @@
                     $this->close("li");
                 endforeach;
                 $this->close("ul");
-            $this->close("div");
-        else:
-            $this->p()->id("table-of-contents")->addClass(array("col-xs-12", "h3", "clearfix", "ink-bright-red"))->closeElement()
-                ->text("Yikes! There's nothing here yet. Please try back later.")
-            ->close("p");
-            $this->p()->id("go-back")->addClass(array("col-xs-12", "h4", "clearfix"))->closeElement()
+            else:
+                $this->p()->id("table-of-contents")->addClass(array("col-xs-12", "h3", "clearfix", "ink-bright-red"))->closeElement()
+                    ->text("Yikes! There's nothing here yet. Please try back later.")
+                ->close("p");
+            endif;
+            $this->p()->id("go-back")->addClass(array('review-fix','strong','ink-bright-green','clearfix','table-of-contents-link'))->closeElement()
                 ->a("", "/reviews.html", "", "", "table-of-contents-link")->text("&laquo; Back to reviews")->close("a")
             ->close("p");
-        endif;
+        $this->close("div");
         
         $hrCounter = 1;
         $hrDirection = 1;

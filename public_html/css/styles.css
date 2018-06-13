@@ -199,6 +199,7 @@ strike,.strike{text-decoration:line-through}
 	.container{margin:0 auto;max-width:752px}
 	.nav-items > li{padding:24px 24px}
 	.pad-right-8{padding-right:8px}
+	.review-fix{margin-left:42px}
 }
 @media only screen and (min-width:990px){
 	.col-mdl-1{width:8.3333333334%}

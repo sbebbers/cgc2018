@@ -1,18 +1,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://cgc.source.run/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.75</priority>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://cgc.source.run/home.html</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.75</priority>
+		<changefreq>weekly</changefreq>
+		<priority>0.85</priority>
 	</url>
 	<url>
 		<loc>https://cgc.source.run/challenges.html</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.65</priority>
+		<changefreq>weekly</changefreq>
+		<priority>0.85</priority>
 	</url>
 	<url>
 		<loc>https://cgc.source.run/entries.html</loc>
@@ -22,7 +22,7 @@
 	<url>
 		<loc>https://cgc.source.run/news.html</loc>
 		<changefreq>weekly</changefreq>
-		<priority>1.00</priority>
+		<priority>0.85</priority>
 	</url>
 	<url>
 		<loc>https://cgc.source.run/reviews.html</loc>
@@ -30,23 +30,13 @@
 		<priority>0.85</priority>
 	</url>
 	<url>
-		<loc>https://cgc.source.run/reviews/cgc-adventures.aspx</loc>
+		<loc>https://cgc.source.run/rules.html</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.85</priority>
 	</url>
 	<url>
-		<loc>https://cgc.source.run/rules.html</loc>
-		<changefreq>yearly</changefreq>
-		<priority>0.45</priority>
-	</url>
-	<url>
 		<loc>https://cgc.source.run/rules</loc>
-		<changefreq>yearly</changefreq>
-		<priority>0.45</priority>
-	</url>
-	<url>
-		<loc>https://cgc.source.run/results.html</loc>
-		<changefreq>yearly</changefreq>
-		<priority>0.33</priority>
+		<changefreq>weekly</changefreq>
+		<priority>0.85</priority>
 	</url>
 </urlset>

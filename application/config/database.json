@@ -3,7 +3,7 @@
 		"readUser": "v5b$!7jykzHI3XOL1kl9+GeNzIJmHw==!xD7T-LO",
 		"writeUser": "(ZPO:eC#kzHI3XOL1kl9+GeNzIJmHw==N2jMzx8i"
 	},
-	"readUser": "root",
+	"readUser": "readuser",
 	"writeUser": "root",
 	"host": "localhost",
 	"port": 3306,
