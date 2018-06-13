@@ -88,8 +88,7 @@ class ControllerCore
     }
     
     /**
-     * Gets the altenating classes for the HR Rule
-     * to split each section of the views
+     * Gets the altenating 
      * 
      * @author	Shaun B
      * @date	16 Feb 2018 14:35:43

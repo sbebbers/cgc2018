@@ -64,7 +64,7 @@ class Library
     }
     
     /**
-     * Returns current site version
+     * Returns current version of the framework
      *
      * @param   na
      * @author  sbebbington B
@@ -75,27 +75,22 @@ class Library
      *          version
      */
     public function version(){
-        return '1.1.0';
+        return '1.1';
     }
     
     /**
      * Is it Easter yet?
      * Try <?php echo $this->controllerInstance->libraryInstance->easterEgg(); ?> in your view
      * 
-     * @param   na
      * @author  sbebbington B
      * @date    2016-02-19
-     * @return  Something good
+     * @return  string
      * @todo    Nothing as this function is perfect
      */
     public function easterEgg(){
         $easterEgg = chr(116) . chr(104) . chr(101) . chr(99) . chr(97) . chr(116) . chr(97) . chr(112) . chr(105);
         return trim("
-            <div class=\"container\">
-                <a href=\"http://{$easterEgg}.com\">
-                    <img src=\"http://{$easterEgg}.com/api/images/get?format=src&type=gif\" alt=\"Easter Egg\">
-                </a>
-            </div>
+            <div><a href=\"http://{$easterEgg}.com\" class=\"centre text-centre\" style=\"text-decoration:none;\"><img src=\"http://{$easterEgg}.com/api/images/get?format=src&type=gif\" alt=\"Easter Egg\"></a></div>
         ");
     }
     
@@ -132,25 +127,6 @@ class Library
     }
     
     /**
-     * Redirects using the PHP header command 
-     *
-     * @param   string, string, [int]
-     * @author  sbebbington || Steve
-     * @date	17 Nov 2017 10:46:39
-     * @version 0.1.5-RC2
-     * @return  void
-     */
-    public function redirect(string $destination = '', string $host = '', int $serverResponseCode = 307){
-        if($destination == '' || $host == ''){
-            $this->debug("You need to set a destination and host parameters as a string to call the Library redirect() method", true);
-        }
-        $host    = preg_replace('/^https?\:\/\//','',$host);
-        $http    = isHttps() ? "https://" : "http://";
-        header("Location:{$http}{$host}/{$destination}", true, $serverResponseCode);
-        exit;
-    }
-    
-    /**
      * Will add a random and predictable padding
      * to the encrypted and decrypted string. Made
      * this method less like a ZX80 sub routine
@@ -164,7 +140,7 @@ class Library
      * @return  string
      */
     public function getEncryptionPadding(int $numberToPad = 8){
-        $shuffle    = "1q2w3e4r5t6y7u8i9o0p!AS£D\$%F^G!H*J(K)L-z=x[c]v{b}n;m:QW@E#R*T<Y>U,I.O/P?a|s%d1f2g3h4j5k6l7Z8X9C0VBNM";
+        $shuffle    = "1q2w3e4r5t6y7u8i9o0p!AS" . utf8_encode("\xa3") . "D\$%F^G!H*J(K)L-z=x[c]v{b}n;m:QW@E#R*T<Y>U,I.O/P?a|s%d1f2g3h4j5k6l7Z8X9C0VBNM";
         $shuffle    = str_shuffle("{$shuffle}");
         
         return substr($shuffle, 0, $numberToPad);        
@@ -298,40 +274,17 @@ class Library
     }
     
     /**
-     * Handles the posting of data
-     *
-     * @param   string, object, string, string, string
-     * @author  sbebbington && Stack Overflow
-     * @date    3 Mar 2017 09:51:09
+     * Converts a JSON object to a
+     * PHP resource
+     * 
+     * @param   JSON
+     * @author  sbebbington
+     * @date    3 Feb 2017 14:47:48
      * @version 0.1.5-RC2
-     * @return  object
+     * @return  resource
      */
-    public function filePostContents(string $url, $data, string $applicationType = 'x-www-form-urlencoded', string $username = '', string $password = '', string $characterEncoding = 'utf-8'){
-        if($applicationType === 'x-www-form-urlencoded'){
-            if(!is_object($data) || !is_array($data)){
-                $data    = [$data];
-            }
-            $data   = http_build_query($data);
-        }
-        $options    = array();
-    
-        $options['http'] = array(
-            'method'  => 'POST',
-            'content' => $data
-        );
-        $header    = array(
-            'header'  =>    "Content-type: application/{$applicationType};charset={$characterEncoding}",
-        );
-        if(is_string($data)){
-            $header['header']   .= PHP_EOL . 'Content-Length: ' . strlen($data) . PHP_EOL;
-        }
-        if(!empty($username) && !empty($password)){
-            $header['header']   .= PHP_EOL . "Authorization: Basic " . base64_encode("{$username}:{$password}");
-        }
-        $options['http']    = array_merge($options['http'], $header);
-         
-        $context    = stream_context_create($options);
-        return file_get_contents($url, false, $context);
+    public function convertFromJSON($data){
+        return json_decode($data);
     }
     
     /**

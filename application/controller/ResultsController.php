@@ -1,6 +1,8 @@
 <?php
 
-class ResultsController
+use Application\Controller\ControllerCore;
+
+class ResultsController extends ControllerCore
 {
     /**
      * @var string $header
@@ -23,6 +25,7 @@ class ResultsController
     public $view;
     
     public function __construct(){
+        ControllerCore::__construct();
         $this->view = new stdClass();
         $this->setView();
     }

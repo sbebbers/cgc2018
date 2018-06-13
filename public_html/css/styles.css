@@ -108,6 +108,7 @@ strike,.strike{text-decoration:line-through}
     .nav-items{display:inline;list-style-type:none;margin:0 auto;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-padding-start:0}
 	.nav-items > li{display:inline-block;list-style:none;padding:2px;border:8px solid #000;border-top:15px solid #000;margin:8px;line-height:32px}
 	.twitter-box{margin:24px auto 8px}
+	.hide{display:none}
 }
 @media only screen and (min-width:480px){
 	.col-sm-1{width:8.3333333334%}
@@ -198,6 +199,7 @@ strike,.strike{text-decoration:line-through}
 	.container{margin:0 auto;max-width:752px}
 	.nav-items > li{padding:24px 24px}
 	.pad-right-8{padding-right:8px}
+	.review-fix{margin-left:42px}
 }
 @media only screen and (min-width:990px){
 	.col-mdl-1{width:8.3333333334%}
