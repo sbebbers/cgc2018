@@ -15,7 +15,7 @@ use Application\Core\FrameworkException\FrameworkException;
  * @return string
  * @throws FrameworkException
  */
-function getConfig(string $parameter = null): string
+function getConfig($parameter = null)
 {
     if (! file_exists(serverPath("/config/site.json"))) {
         throw new FrameworkException("A site.json file is required in the configuration at the application level for the framework to run", 0x02);
@@ -37,7 +37,7 @@ function getConfig(string $parameter = null): string
  * @version 0.1.5-RC2
  * @return boolean
  */
-function isHttps(): string
+function isHttps()
 {
     return getConfig('protocol') == 'https';
 }
@@ -51,7 +51,7 @@ function isHttps(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function host(): string
+function host()
 {
     return $_SERVER['HTTP_HOST'];
 }
@@ -66,7 +66,7 @@ function host(): string
  * @version 0.1.5-RC2
  * @return void
  */
-function setTimeZone(string $timeZone): void
+function setTimeZone($timeZone)
 {
     date_default_timezone_set($timeZone);
 }
@@ -79,7 +79,7 @@ function setTimeZone(string $timeZone): void
  * @version 0.1.5-RC2
  * @return string
  */
-function getUserIPAddress(): string
+function getUserIPAddress()
 {
     $client = $_SERVER['HTTP_CLIENT_IP'] ?? '';
     $forward = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '';
@@ -101,7 +101,7 @@ function getUserIPAddress(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function getServerIPAddress(): string
+function getServerIPAddress()
 {
     return $_SERVER['SERVER_ADDR'];
 }
@@ -114,7 +114,7 @@ function getServerIPAddress(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function getSegment(): string
+function getSegment()
 {
     $page = array_filter(explode('/', $_SERVER['REQUEST_URI']), 'strlen');
     return ! empty($page) ? strtolower($page[count($page)]) : 'home';
@@ -128,7 +128,7 @@ function getSegment(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function getSelf(): string
+function getSelf()
 {
     return $_SERVER['PHP_SELF'];
 }
@@ -141,7 +141,7 @@ function getSelf(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function getQueryString(): string
+function getQueryString()
 {
     return str_replace("/", '', $_SERVER['QUERY_STRING']);
 }
@@ -155,7 +155,7 @@ function getQueryString(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function getSiteVersion(): string
+function getSiteVersion()
 {
     return getConfig('version');
 }
@@ -169,7 +169,7 @@ function getSiteVersion(): string
  * @version 0.1.5-RC2
  * @return bool
  */
-function isReleaseCandidate(): string
+function isReleaseCandidate()
 {
     return getConfig('rc');
 }
@@ -183,7 +183,7 @@ function isReleaseCandidate(): string
  * @version 0.1.5-RC2
  * @return bool
  */
-function isDevelopmentVersion(): string
+function isDevelopmentVersion()
 {
     return getConfig('dev');
 }
@@ -196,7 +196,7 @@ function isDevelopmentVersion(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function logErrorPath(string $routeTo = null): string
+function logErrorPath($routeTo = null)
 {
     $baseDir = serverPath("/logs");
     return str_replace("\\", "/", "{$baseDir}{$routeTo}");
@@ -215,7 +215,7 @@ function logErrorPath(string $routeTo = null): string
  * @return resource | false
  * @throws Exception
  */
-function writeToLogFile($error = []): bool
+function writeToLogFile($error = [])
 {
     if (empty($error)) {
         return false;
@@ -259,7 +259,7 @@ function writeToLogFile($error = []): bool
     }
 
     if (! is_dir($logPath)) {
-        if (! mkdir($logPath, 0755)) {
+        if (! mkdir($logPath, 0775)) {
             throw new Exception("Filepath {$logPath} could not be created", 0xf17e);
         }
     }
@@ -287,7 +287,7 @@ function writeToLogFile($error = []): bool
  * @version 0.1.5-RC2
  * @return bool
  */
-function isEmpty($value): bool
+function isEmpty($value)
 {
     return (is_string($value) || is_numeric($value)) ? empty($value) && strlen("{$value}") : empty($value);
 }

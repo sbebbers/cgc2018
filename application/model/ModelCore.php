@@ -26,15 +26,14 @@ class ModelCore
     /**
      * Constructor
      *
-     * @param
-     *            field_type
+     * @param string $dbUser
      * @author sbebbington
      * @date 26 Sep 2017 14:43:38
      * @version 0.1.5-RC2
      * @return void
      * @throws FrameworkException
      */
-    public function __construct(string $dbUser = '')
+    public function __construct($dbUser = null)
     {
         if (! in_array($dbUser, $this->userTypes)) {
             throw new FrameworkException("Database user type was not set or is incorrect when constructing the ModelCore", 0x03);
@@ -75,7 +74,7 @@ class ModelCore
      * @version 0.1.5-RC2
      * @return void
      */
-    public function setDbUser(string $dbUser)
+    public function setDbUser($dbUser)
     {
         $this->dbUser = $dbUser;
     }
@@ -96,14 +95,13 @@ class ModelCore
     /**
      * Sets the tables object
      *
-     * @param
-     *            field_type
+     * @param string $db
      * @author sbebbington
      * @date 24 Oct 2017 13:26:43
      * @version 0.1.5-RC2
      * @return void
      */
-    private function setTables(string $db = '')
+    private function setTables($db = '')
     {
         $query = "SELECT `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` " . "WHERE `TABLE_TYPE`='BASE TABLE' AND `TABLE_SCHEMA`=?;";
 
@@ -129,7 +127,7 @@ class ModelCore
      * @return resource
      * @throws FrameworkException
      */
-    protected function execute(PDOStatement $query, array $parameters = [], bool $fetchAll = false, string $key = '', $fetchType = PDO::FETCH_ASSOC)
+    protected function execute(PDOStatement $query, array $parameters = [], $fetchAll = false, $key = '', $fetchType = PDO::FETCH_ASSOC)
     {
         $trace = debug_backtrace();
         $caller = $trace[1];
@@ -168,7 +166,7 @@ class ModelCore
      * @return array
      * @throws FrameworkException
      */
-    public function getPageCount(string $page = 'home', string $type = 'live')
+    public function getPageCount($page = 'home', $type = 'live')
     {
         $query = "SELECT `id`, `{$page}` FROM `{$this->db}`.`{$this->tables->page_counts}` WHERE `type` = ?;";
         return $this->execute($this->connection->prepare($query), [

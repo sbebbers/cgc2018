@@ -8,13 +8,11 @@ class ReviewsController extends ControllerCore
 {
 
     /**
-     *
      * @var string $header
      */
     protected $header = 'Crap Games Competition 2018 Reviews';
 
     /**
-     *
      * @var string $subHeader
      */
     protected $subHeader = 'Here you will find the latest reviews of the very best entries';
@@ -38,7 +36,7 @@ class ReviewsController extends ControllerCore
         }
     }
 
-    public function setGameType(string $gameType)
+    public function setGameType($gameType)
     {
         $this->gameType = $gameType;
     }
@@ -83,7 +81,7 @@ class ReviewsController extends ControllerCore
      * @date 7 May 2018 16:21:57
      * @return array
      */
-    public function getContent(string $gameType = '0')
+    public function getContent($gameType = '0')
     {
         $content = array();
         $contents = $this->sql->getContent($gameType);
@@ -125,7 +123,7 @@ class ReviewsController extends ControllerCore
      * @date 7 May 2018 16:23:04
      * @return array
      */
-    public function getTableOfContents(string $gameType = '0')
+    public function getTableOfContents($gameType = '0')
     {
         $returnValues = array();
         if ($gameType == '0') {

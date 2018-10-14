@@ -9,13 +9,13 @@ class EntriesController extends ControllerCore
 
     /**
      *
-     * @var string $header
+     * @var $header
      */
     protected $header = 'Crap Games Competition 2018 Entries';
 
     /**
      *
-     * @var string $subHeader
+     * @var $subHeader
      */
     protected $subHeader = 'Here are our entries so far - <span class="ink-bright-cyan">to download each listed, click on the relevant screen shot</span>';
 

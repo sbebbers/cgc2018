@@ -27,7 +27,7 @@ class Library
      * @version 0.1.5-RC2
      * @return void
      */
-    public function debug($variable = null, bool $die = false, string $message = '', string $file = '', string $line = '', string $header = ''): void
+    public function debug($variable = null, $die = false, $message = '', $file = '', $line = '', $header = '')
     {
         if (getConfig('mode') != 'test') {
             return;
@@ -49,7 +49,7 @@ class Library
      * @date 26 Sep 2017 10:05:31
      * @return string
      */
-    public function version(): string
+    public function version()
     {
         return getConfig('version');
     }
@@ -63,7 +63,7 @@ class Library
      * @return string
      * @todo Nothing as this function is perfect
      */
-    public function easterEgg(): string
+    public function easterEgg()
     {
         $easterEgg = chr(116) . chr(104) . chr(101) . chr(99) . chr(97) . chr(116) . chr(97) . chr(112) . chr(105);
         return trim("
@@ -83,7 +83,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function encryptIt(string $string, string $secret = '', int $padding = 8, bool $urlEncode = false): string
+    public function encryptIt($string, $secret = '', int $padding = 8, $urlEncode = false)
     {
         $md5 = ($secret === '') ? md5(md5($this->key)) : md5(md5($secret));
         $encrypt = $this->getEncryptionPadding($padding) . openssl_encrypt($string, $this->encryption, $md5) . $this->getEncryptionPadding($padding);
@@ -102,7 +102,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function decryptIt(string $string, string $secret = '', int $padding = 8, bool $urlDecode = false): string
+    public function decryptIt($string, $secret = '', int $padding = 8, $urlDecode = false)
     {
         $md5 = ($secret === '') ? md5(md5($this->key)) : md5(md5($secret));
         $decrypt = openssl_decrypt(substr($string, $padding, - $padding), $this->encryption, $md5);
@@ -123,7 +123,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function getEncryptionPadding(int $numberToPad = 8): string
+    public function getEncryptionPadding(int $numberToPad = 8)
     {
         $shuffle = "1q2w3e4r5t6y7u8i9o0p!AS" . utf8_encode("\xa3") . "D\$%F^G!H*J(K)L-z=x[c]v{b}n;m:QW@E#R*T<Y>U,I.O/P?a|s%d1f2g3h4j5k6l7Z8X9C0VBNM";
         $shuffle = str_shuffle("{$shuffle}");
@@ -142,7 +142,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function convertSnakeCase(string $snake = null, string $delimiter = '_'): string
+    public function convertSnakeCase($snake = null, $delimiter = '_')
     {
         if ($snake != '') {
             $_snake = explode($delimiter, $snake);
@@ -168,7 +168,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function camelCaseFromDashes(string $string = null): string
+    public function camelCaseFromDashes($string = null)
     {
         return $this->convertSnakeCase($string, '-');
     }
@@ -181,7 +181,7 @@ class Library
      * @date 12 Feb 2018 22:59:54
      * @return string
      */
-    public function convertToHtmlId(string $text = ''): string
+    public function convertToHtmlId($text = '')
     {
         $toReplace = [
             "'" => "",

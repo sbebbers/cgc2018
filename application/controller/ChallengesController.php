@@ -8,13 +8,11 @@ class ChallengesController extends ControllerCore
 {
 
     /**
-     *
      * @var string $header
      */
     protected $header = 'Crap Games Competition 2018 Challenges';
 
     /**
-     *
      * @var string $subHeader
      */
     protected $subHeader = 'Earn a crisp by entering one or more of our challenges';

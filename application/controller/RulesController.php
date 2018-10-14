@@ -8,13 +8,11 @@ class RulesController extends ControllerCore
 {
 
     /**
-     *
-     * @var string $header
+     * @var string$header
      */
     protected $header = 'Crap Games Competition 2018 Rules';
 
     /**
-     *
      * @var string $subHeader
      */
     protected $subHeader = 'All submissions will hereby conform to the following rules. To challenge these rules, please contact c/o Mrs Yates, Ocean Software, Manchester.';

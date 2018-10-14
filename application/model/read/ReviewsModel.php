@@ -25,7 +25,7 @@ class ReviewsModel extends ModelCore
      * @return array
      * @throws FrameworkException
      */
-    public function getContent(string $gameType = '0')
+    public function getContent($gameType = '0')
     {
         $query = "SELECT `title`, `sub_header` AS `sub-header`, " . "`developer`, `mega_game` AS `yawn-sinclair-mega-game`, " . "`content`, `file_name` AS `file-name`, `alt`,  " . "`summary`, `graphics`, `playability`, `addictiveness`, `total`, `sundry` " . "FROM `{$this->db}`.`{$this->table}` WHERE `game_type`='{$gameType}';";
         return $this->execute($this->connection->prepare($query), [], true);
@@ -40,7 +40,7 @@ class ReviewsModel extends ModelCore
      * @return array
      * @throws FrameworkException
      */
-    public function getTableOfContents(string $gameType = '0')
+    public function getTableOfContents($gameType = '0')
     {
         $query = "SELECT `title` FROM `{$this->db}`.`{$this->table}` WHERE `game_type`='{$gameType}';";
         return $this->execute($this->connection->prepare($query), [], true);

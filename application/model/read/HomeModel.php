@@ -25,7 +25,7 @@ class HomeModel extends ModelCore
      * @return string
      * @throws FrameworkException
      */
-    public function getContent(string $colName = 'content')
+    public function getContent($colName = 'content')
     {
         if (empty($colName) || ! in_array($colName, [
             'header',
