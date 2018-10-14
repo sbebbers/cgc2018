@@ -77,7 +77,7 @@ class EntriesController extends ControllerCore
     public function getContent()
     {
         $content = array();
-        foreach ($this->sql->getContent() as $key => $data) {
+        foreach ($this->sql->getContent() as $data) {
             $content[$data['numeral']] = [
                 'title' => $data['title'],
                 'format' => $data['format'],
