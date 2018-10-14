@@ -27,7 +27,7 @@ class Library
      * @version 0.1.5-RC2
      * @return void
      */
-    public function debug($variable = null, $die = false, string $message = '', string $file = '', string $line = '', string $header = '')
+    public function debug($variable = null, $die = false, $message = '', $file = '', $line = '', $header = '')
     {
         if (getConfig('mode') != 'test') {
             return;
@@ -83,7 +83,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function encryptIt(string $string, string $secret = '', int $padding = 8, $urlEncode = false)
+    public function encryptIt($string, $secret = '', int $padding = 8, $urlEncode = false)
     {
         $md5 = ($secret === '') ? md5(md5($this->key)) : md5(md5($secret));
         $encrypt = $this->getEncryptionPadding($padding) . openssl_encrypt($string, $this->encryption, $md5) . $this->getEncryptionPadding($padding);
@@ -102,7 +102,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function decryptIt(string $string, string $secret = '', int $padding = 8, $urlDecode = false)
+    public function decryptIt($string, $secret = '', int $padding = 8, $urlDecode = false)
     {
         $md5 = ($secret === '') ? md5(md5($this->key)) : md5(md5($secret));
         $decrypt = openssl_decrypt(substr($string, $padding, - $padding), $this->encryption, $md5);
@@ -142,7 +142,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function convertSnakeCase(string $snake = null, string $delimiter = '_')
+    public function convertSnakeCase($snake = null, $delimiter = '_')
     {
         if ($snake != '') {
             $_snake = explode($delimiter, $snake);
@@ -168,7 +168,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function camelCaseFromDashes(string $string = null)
+    public function camelCaseFromDashes($string = null)
     {
         return $this->convertSnakeCase($string, '-');
     }
@@ -181,7 +181,7 @@ class Library
      * @date 12 Feb 2018 22:59:54
      * @return string
      */
-    public function convertToHtmlId(string $text = '')
+    public function convertToHtmlId($text = '')
     {
         $toReplace = [
             "'" => "",

@@ -281,7 +281,7 @@ class Core extends HtmlBuilder
      * @version 0.1.5-RC2
      * @return void
      */
-    public function setView($instance, string $masterKey = null)
+    public function setView($instance, $masterKey = null)
     {
         foreach ($instance as $key => $data) {
             if ($masterKey == '') {

@@ -8,13 +8,11 @@ class NewsController extends ControllerCore
 {
 
     /**
-     *
      * @var string $header
      */
     protected $header = 'Crap Games Competition 2018 News';
 
     /**
-     *
      * @var string $subHeader
      */
     protected $subHeader = 'First. For. News.';

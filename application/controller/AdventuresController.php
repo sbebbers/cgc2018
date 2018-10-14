@@ -5,13 +5,11 @@ class AdventuresController extends ReviewsController
 {
 
     /**
-     *
      * @var string $header
      */
     protected $header = 'CGC Adventures';
 
     /**
-     *
      * @var string $subHeader
      */
     protected $subHeader = 'You are looking at a website. The website seems rather crap. Below this text you will find reviews for your perusal. What now?';

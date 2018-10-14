@@ -15,7 +15,7 @@ use Application\Core\FrameworkException\FrameworkException;
  * @return string
  * @throws FrameworkException
  */
-function getConfig(string $parameter = null)
+function getConfig($parameter = null)
 {
     if (! file_exists(serverPath("/config/site.json"))) {
         throw new FrameworkException("A site.json file is required in the configuration at the application level for the framework to run", 0x02);
@@ -66,7 +66,7 @@ function host()
  * @version 0.1.5-RC2
  * @return void
  */
-function setTimeZone(string $timeZone)
+function setTimeZone($timeZone)
 {
     date_default_timezone_set($timeZone);
 }
@@ -196,7 +196,7 @@ function isDevelopmentVersion()
  * @version 0.1.5-RC2
  * @return string
  */
-function logErrorPath(string $routeTo = null)
+function logErrorPath($routeTo = null)
 {
     $baseDir = serverPath("/logs");
     return str_replace("\\", "/", "{$baseDir}{$routeTo}");
@@ -259,7 +259,7 @@ function writeToLogFile($error = [])
     }
 
     if (! is_dir($logPath)) {
-        if (! mkdir($logPath, 0755)) {
+        if (! mkdir($logPath, 0775)) {
             throw new Exception("Filepath {$logPath} could not be created", 0xf17e);
         }
     }

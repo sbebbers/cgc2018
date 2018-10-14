@@ -60,7 +60,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function a(string $id = null, string $href = null, string $target = null, string $onClick = null, string $class = null, $style = null, $close = true)
+    public function a($id = null, $href = null, $target = null, $onClick = null, $class = null, $style = null, $close = true)
     {
         print("<a");
 
@@ -99,7 +99,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function hr(string $id = null, string $class = null)
+    public function hr($id = null, $class = null)
     {
         print("<hr");
         if (strlen($id)) {
@@ -122,7 +122,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function id(string $id = null)
+    public function id($id = null)
     {
         print(" id=\"{$id}\"");
         return $this;
@@ -138,7 +138,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function span(string $id = null, string $class = null)
+    public function span($id = null, $class = null)
     {
         print("<span");
 
@@ -167,7 +167,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function img(string $id = null, string $path, int $width = 0, int $height = 0, string $alt = null, string $class = null)
+    public function img($id = null, $path, int $width = 0, int $height = 0, $alt = null, $class = null)
     {
         print("<img");
         if (! empty($id)) {
@@ -232,7 +232,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function dataAttr(string $attrName, string $data)
+    public function dataAttr($attrName, $data)
     {
         print(" data-{$attrName}=\"{$data}\"");
 
@@ -249,7 +249,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function placeHolder(string $placeHolder = null)
+    public function placeHolder($placeHolder = null)
     {
         print(" placeholder");
         if (strlen($placeHolder)) {
@@ -288,7 +288,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function text(string $text, $decode = false)
+    public function text($text, $decode = false)
     {
         print($decode === false ? $text : htmlspecialchars_decode($text));
 
@@ -311,7 +311,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function textArea(string $id = null, string $name = null, int $rows = 0, int $cols = 0, string $placeHolder = null, string $class = null, $required = false)
+    public function textArea($id = null, $name = null, int $rows = 0, int $cols = 0, $placeHolder = null, $class = null, $required = false)
     {
         print("<textarea");
 
@@ -356,7 +356,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function form(string $id = null, string $action = null, string $method = 'post', string $class = null, $style = null, string $encType = null)
+    public function form($id = null, $action = null, $method = 'post', $class = null, $style = null, $encType = null)
     {
         print("<form");
 
@@ -416,7 +416,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function label(string $text, string $id = null, string $for = null, string $class = null, $style = null)
+    public function label($text, $id = null, $for = null, $class = null, $style = null)
     {
         print("<label");
 
@@ -450,7 +450,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function name(string $name)
+    public function name($name)
     {
         print(" name=\"{$name}\"");
 
@@ -466,7 +466,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function type(string $type)
+    public function type($type)
     {
         print(" type=\"{$type}\"");
 
@@ -482,7 +482,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function value(string $value)
+    public function value($value)
     {
         print(" value=\"{$value}\"");
 
@@ -523,7 +523,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function select(string $id = null, string $name = null, string $class = null, array $options, string $selected = null, $close = true)
+    public function select($id = null, $name = null, $class = null, array $options, $selected = null, $close = true)
     {
         print("<select");
         if (! empty($id)) {
@@ -554,7 +554,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function option(array $options, string $selected = null)
+    public function option(array $options, $selected = null)
     {
         foreach ($options as $key => $data) {
             print("<option value=\"{$key}\"");
@@ -588,7 +588,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function open(string $element, string $id = null, $class = null, $style = null, $selfClose = false)
+    public function open($element, $id = null, $class = null, $style = null, $selfClose = false)
     {
         print("<{$element}");
         if (strlen($id) > 0) {
@@ -619,7 +619,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function close(string $element = null)
+    public function close($element = null)
     {
         print("</{$element}>");
 
@@ -641,7 +641,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function h(int $size, string $text, string $id = null, $class = null, $style = null)
+    public function h(int $size, $text, $id = null, $class = null, $style = null)
     {
         if ($size < 1 || $size > 6) {
             $this->lib->debug("Please set your header size between 1 and 6, value {$size} is not allowed", true);
@@ -674,7 +674,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function javaScript(string $src = null)
+    public function javaScript($src = null)
     {
         print("<script type=\"text/javascript\"");
         print(strlen($src) ? " src=\"{$src}\">" : ">");
@@ -685,14 +685,13 @@ class HtmlBuilder
     /**
      * Sets title attribute within an HTML element
      *
-     * @param
-     *            string
+     * @param string $title
      * @author sbebbington
      * @date 28 Mar 2017 - 15:29:22
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function title(string $title = null)
+    public function title($title = null)
     {
         print(" title=\"{$title}\"");
 

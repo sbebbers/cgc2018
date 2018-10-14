@@ -23,7 +23,7 @@ class index
      * This will initiate the core to load the view
      * according to the uri path, one may also
      * change the default timezone for the project
-     * by altering the public $timeZone string above
+     * by altering the public $timeZone above
      * for a list of valid timezones, see:
      * http://php.net/manual/en/timezones.php
      *
@@ -94,7 +94,7 @@ class index
  * @version 0.1.5-RC2
  * @return string
  */
-function serverPath(string $routeTo = '')
+function serverPath($routeTo = '')
 {
     $baseDir = dirname(__DIR__) . "/application";
     return str_replace("\\", "/", "{$baseDir}{$routeTo}");

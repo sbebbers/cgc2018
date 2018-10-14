@@ -5,13 +5,11 @@ class ResultsController extends ControllerCore
 {
 
     /**
-     *
      * @var string $header
      */
     protected $header = 'Crap Games Competition 2018 Results <strong class="ink-bright-red">(add this page last)</strong>';
 
     /**
-     *
      * @var string $subHeader
      */
     protected $subHeader = '<strong class="ink-bright-red">Note before deployment:</strong> The results will be the last page to make so <strong class="ink-bright-red">don\'t</strong> put this live until the results have been decided!';
