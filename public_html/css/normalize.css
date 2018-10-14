@@ -121,71 +121,19 @@ audio, video, canvas, progress {
 	display: inline-block
 }
 
-audio
-
-
-:not
-
- 
-
-(
-[
-controls
-]
-
- 
-
-){
-display
-
-
-:
-
- 
-
-none
-
-
-;
-height
-
-
-:
-
- 
-
-0
+audio:not ([controls] ) {
+	display: none;
+	height: 0
 }
+
 img {
 	border-style: none
 }
 
-svg
-
-
-:not
-
- 
-
-(
-:root
-
- 
-
-){
-overflow
-
-
-:
-
- 
-
-hidden
-
-
-
-
+svg:not (:root ) {
+	overflow: hidden
 }
+
 button, input, optgroup, select, textarea {
 	font-family: sans-serif;
 	font-size: 100%;

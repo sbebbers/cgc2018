@@ -1,7 +1,7 @@
 {
-	"baseURL": "https://cgc.source.run",
-	"protocol": "https",
-	"cookieDomain": "cgc.source.run",
+	"baseURL": "http://cgc2018.local",
+	"protocol": "http",
+	"cookieDomain": "cgc2018.local",
 	"uriPath": "/",
 	"loadCoreController": true,
 	"version": "1.0",

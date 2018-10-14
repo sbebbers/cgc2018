@@ -23,7 +23,7 @@ function getConfig(string $parameter = ''): string
     if (empty($parameter)) {
         $parameter = 'baseURL';
     }
-    return json_decode(file_get_contents(serverPath("/config/site.json")), true)[$parameter] ?? null;
+    return json_decode(file_get_contents(serverPath("/config/site.json")), true)[$parameter] ?? '';
 }
 
 /**
