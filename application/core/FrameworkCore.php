@@ -52,8 +52,6 @@ class Core extends HtmlBuilder
     /**
      * Core constructor
      *
-     * @param
-     *            field_type
      * @author sbebbington
      * @date 26 Sep 2017 14:42:15
      * @version 0.1.5-RC2
@@ -93,8 +91,7 @@ class Core extends HtmlBuilder
      * Additionally, it will now set page partial views
      * to switch off, send false as a parameter
      *
-     * @param
-     *            bool
+     * @param bool $setPagePartialViews
      * @author sbebbington
      * @date 28 Jul 2017 14:29:45
      * @version 0.1.5-RC2
@@ -134,8 +131,6 @@ class Core extends HtmlBuilder
      * Sets up the host object and checks against
      * the error reporting config values
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 25 Jul 2017 09:40:06
      * @version 0.1.5-RC2
@@ -145,7 +140,7 @@ class Core extends HtmlBuilder
     {
         $this->host = getConfig('baseURL') . getConfig("uriSegments");
         if (in_array($this->host, $this->errorReporting)) {
-            error_reporting(- 1);
+            error_reporting(-1);
             ini_set('display_errors', 'On');
         } else {
             error_reporting(0);
@@ -206,8 +201,6 @@ class Core extends HtmlBuilder
     /**
      * Sets the page title and meta descriptions
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 25 Jul 2017 10:50:31
      * @version 0.1.5-RC2
@@ -231,7 +224,7 @@ class Core extends HtmlBuilder
      * @version 0.1.5-RC2
      * @return string
      */
-    public function setMetaData(array $pageData = []): string
+    public function setMetaData(array $pageData = [])
     {
         if (empty($pageData) || empty($pageData['default'])) {
             return '';
@@ -264,7 +257,7 @@ class Core extends HtmlBuilder
      * @version 0.1.5-RC2
      * @return void
      */
-    protected function checkExtension(): void
+    protected function checkExtension()
     {
         if (strpos($this->segment, ".") > 0) {
             $segments = explode(".", $this->segment);
@@ -288,7 +281,7 @@ class Core extends HtmlBuilder
      * @version 0.1.5-RC2
      * @return void
      */
-    public function setView($instance, string $masterKey = null): void
+    public function setView($instance, string $masterKey = null)
     {
         foreach ($instance as $key => $data) {
             if ($masterKey == '') {
@@ -333,7 +326,7 @@ class Core extends HtmlBuilder
      */
     public function loadPage()
     {
-        if ($this->segment == "") {
+        if (empty($this->segment)) {
             $this->segment = 'home';
         }
 
