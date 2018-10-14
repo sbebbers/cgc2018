@@ -98,7 +98,7 @@ class Core extends HtmlBuilder
      * @return boolean
      * @throws FrameworkException
      */
-    protected function setSiteConfiguration(bool $setPagePartialViews = true)
+    protected function setSiteConfiguration($setPagePartialViews = true)
     {
         if (! file_exists(serverPath('/config/pages.json'))) {
             return false;
@@ -303,7 +303,7 @@ class Core extends HtmlBuilder
      * @version 0.1.5-RC2
      * @return resource
      */
-    public function emptySession(bool $emptyFlash = false)
+    public function emptySession($emptyFlash = false)
     {
         return ($emptyFlash === true) ? $_SESSION['flashMessage'] = array() : array();
     }

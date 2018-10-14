@@ -60,7 +60,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function a(string $id = null, string $href = null, string $target = null, string $onClick = null, string $class = null, $style = null, bool $close = true)
+    public function a(string $id = null, string $href = null, string $target = null, string $onClick = null, string $class = null, $style = null, $close = true)
     {
         print("<a");
 
@@ -269,7 +269,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function closeElement(bool $selfClose = false)
+    public function closeElement($selfClose = false)
     {
         print($selfClose === false ? ">" : " />");
 
@@ -288,7 +288,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function text(string $text, bool $decode = false)
+    public function text(string $text, $decode = false)
     {
         print($decode === false ? $text : htmlspecialchars_decode($text));
 
@@ -311,7 +311,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function textArea(string $id = null, string $name = null, int $rows = 0, int $cols = 0, string $placeHolder = null, string $class = null, bool $required = false)
+    public function textArea(string $id = null, string $name = null, int $rows = 0, int $cols = 0, string $placeHolder = null, string $class = null, $required = false)
     {
         print("<textarea");
 
@@ -499,7 +499,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function disabled(bool $disabled = true)
+    public function disabled($disabled = true)
     {
         print($disabled === true ? " disabled=\"disabled\"" : "");
 
@@ -523,7 +523,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function select(string $id = null, string $name = null, string $class = null, array $options, string $selected = null, bool $close = true)
+    public function select(string $id = null, string $name = null, string $class = null, array $options, string $selected = null, $close = true)
     {
         print("<select");
         if (! empty($id)) {
@@ -588,7 +588,7 @@ class HtmlBuilder
      * @version 0.1.5-RC2
      * @return $this
      */
-    public function open(string $element, string $id = null, $class = null, $style = null, bool $selfClose = false)
+    public function open(string $element, string $id = null, $class = null, $style = null, $selfClose = false)
     {
         print("<{$element}");
         if (strlen($id) > 0) {

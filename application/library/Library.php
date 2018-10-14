@@ -27,7 +27,7 @@ class Library
      * @version 0.1.5-RC2
      * @return void
      */
-    public function debug($variable = null, bool $die = false, string $message = '', string $file = '', string $line = '', string $header = '')
+    public function debug($variable = null, $die = false, string $message = '', string $file = '', string $line = '', string $header = '')
     {
         if (getConfig('mode') != 'test') {
             return;
@@ -83,7 +83,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function encryptIt(string $string, string $secret = '', int $padding = 8, bool $urlEncode = false)
+    public function encryptIt(string $string, string $secret = '', int $padding = 8, $urlEncode = false)
     {
         $md5 = ($secret === '') ? md5(md5($this->key)) : md5(md5($secret));
         $encrypt = $this->getEncryptionPadding($padding) . openssl_encrypt($string, $this->encryption, $md5) . $this->getEncryptionPadding($padding);
@@ -102,7 +102,7 @@ class Library
      * @version 0.1.5-RC2
      * @return string
      */
-    public function decryptIt(string $string, string $secret = '', int $padding = 8, bool $urlDecode = false)
+    public function decryptIt(string $string, string $secret = '', int $padding = 8, $urlDecode = false)
     {
         $md5 = ($secret === '') ? md5(md5($this->key)) : md5(md5($secret));
         $decrypt = openssl_decrypt(substr($string, $padding, - $padding), $this->encryption, $md5);
