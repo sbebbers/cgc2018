@@ -1,52 +1,52 @@
 {
-	"allowedSegments":{
+	"allowedSegments": {
 		"CGC-Adventures": "cgc-adventures",
-		"Home": 		"home",
-		"News":			"news",
-		"Entries":		"entries",
-		"Reviews":		"reviews",
-		"Challenges":	"challenges",
-		"Rules":		"rules",
-		"Results":		"results"
+		"Home": "home",
+		"News": "news",
+		"Entries": "entries",
+		"Reviews": "reviews",
+		"Challenges": "challenges",
+		"Rules": "rules",
+		"Results": "results"
 	},
-	"pageController":{
+	"pageController": {
 		"CGC-Adventures": "AdventuresController",
-		"Home": 		"HomeController",
-		"News":			"NewsController",
-		"Entries":		"EntriesController",
-		"Reviews":		"ReviewsController",
-		"Challenges":	"ChallengesController",
-		"Rules":		"RulesController",
-		"Results":		"ResultsController"
+		"Home": "HomeController",
+		"News": "NewsController",
+		"Entries": "EntriesController",
+		"Reviews": "ReviewsController",
+		"Challenges": "ChallengesController",
+		"Rules": "RulesController",
+		"Results": "ResultsController"
 	},
-	"errorReporting":{
-		"0":			"http://cgc2018.local",
-		"1":			"https://cgc2018.local"
+	"errorReporting": {
+		"0": "http://cgc2018.local",
+		"1": "https://cgc2018.local"
 	},
-	"allowedFileExts":{
-		"0":			"htm",
-		"1":			"html",
-		"2":			"asp",
-		"3":			"aspx",
-		"4":			"php",
-		"5":			"phtml"
+	"allowedFileExts": {
+		"0": "htm",
+		"1": "html",
+		"2": "asp",
+		"3": "aspx",
+		"4": "php",
+		"5": "phtml"
 	},
-	"ignoredFileExts":{
-		"0":			"jpeg",
-		"1":			"jpg",
-		"2":			"png",
-		"3":			"js",
-		"4":			"gif",
-		"5":			"ico",
-		"6":			"pdf",
-		"7":			"jpg",
-		"8":			"txt",
-		"9":			"xml"
+	"ignoredFileExts": {
+		"0": "jpeg",
+		"1": "jpg",
+		"2": "png",
+		"3": "js",
+		"4": "gif",
+		"5": "ico",
+		"6": "pdf",
+		"7": "jpg",
+		"8": "txt",
+		"9": "xml"
 	},
-	"partialViews":{
-		"header":		"/view/partial/header.phtml",
-        "footer":		"/view/partial/footer.phtml",
-        "navbar":		"/view/partial/navbar.phtml",
-        "hrcolours":	"/view/partial/hrcolours.phtml"
+	"partialViews": {
+		"header": "/view/partial/header.phtml",
+		"footer": "/view/partial/footer.phtml",
+		"navbar": "/view/partial/navbar.phtml",
+		"hrcolours": "/view/partial/hrcolours.phtml"
 	}
 }
