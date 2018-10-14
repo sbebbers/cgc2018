@@ -1,7 +1,7 @@
 {
-	"baseURL": "https://cgc.source.run",
-	"protocol": "https",
-	"cookieDomain": "cgc.source.run",
+	"baseURL": "http://cgc2018.local",
+	"protocol": "http",
+	"cookieDomain": "cgc2018.local",
 	"uriPath": "/",
 	"loadCoreController": true,
 	"version": "1.0",
@@ -10,5 +10,5 @@
 	"mode": "live",
 	"timeZone": "Europe/London",
 	"key": "Skelet0n",
-    "encryptionType": "AES-128-ECB"
+	"encryptionType": "AES-128-ECB"
 }
