@@ -7,19 +7,20 @@ use Application\Core\FrameworkException\FrameworkException;
  * baseURL setting if an empty string
  * is sent, or cookieDomain if no parameter
  * is sent
- * 
- * @param   string
- * @author  sbebbington
- * @date    2 Jan 2018 10:48:15
+ *
+ * @param string $parameter
+ * @author sbebbington
+ * @date 2 Jan 2018 10:48:15
  * @version 0.1.5-RC2
- * @return  string
- * @throws  FrameworkException
+ * @return string
+ * @throws FrameworkException
  */
-function getConfig(string $parameter= ''){
-    if(!file_exists(serverPath("/config/site.json"))){
+function getConfig(string $parameter = ''): string
+{
+    if (! file_exists(serverPath("/config/site.json"))) {
         throw new FrameworkException("A site.json file is required in the configuration at the application level for the framework to run", 0x02);
     }
-    if(empty($parameter)){
+    if (empty($parameter)) {
         $parameter = 'baseURL';
     }
     return json_decode(file_get_contents(serverPath("/config/site.json")), true)[$parameter] ?? null;
@@ -27,16 +28,17 @@ function getConfig(string $parameter= ''){
 
 /**
  * This will check to see if the server is running
- * http or https. This parameter is now set in the
+ * http or https.
+ * This parameter is now set in the
  * site.json file in the application config
- * 
- * @param   na
- * @author  sbebbington
- * @date    27 Jul 2017 15:35:10
+ *
+ * @author sbebbington
+ * @date 27 Jul 2017 15:35:10
  * @version 0.1.5-RC2
- * @return  boolean
+ * @return boolean
  */
-function isHttps(){
+function isHttps(): string
+{
     return getConfig('protocol') == 'https';
 }
 
@@ -44,47 +46,48 @@ function isHttps(){
  * Returns the name of the current host file from
  * the PHP $_SERVER global thing #n00b
  *
- * @param   na
- * @author  sbebbington
- * @date    5 Oct 2016 10:55:01
+ * @author sbebbington
+ * @date 5 Oct 2016 10:55:01
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function host(){
-    return "{$_SERVER['HTTP_HOST']}";
+function host(): string
+{
+    return $_SERVER['HTTP_HOST'];
 }
 
 /**
  * Sets time zone, for a full list, see
  * http://php.net/manual/en/timezones.php
- * 
- * @param   string
- * @author  sbebbington
- * @date    24 Jan 2017 09:48:21
+ *
+ * @param string $timeZone
+ * @author sbebbington
+ * @date 24 Jan 2017 09:48:21
  * @version 0.1.5-RC2
- * @return  void
+ * @return void
  */
-function setTimeZone(string $timeZone){
+function setTimeZone(string $timeZone): void
+{
     date_default_timezone_set($timeZone);
 }
 
 /**
  * Gets user IP address
  *
- * @param   na
- * @author  sbebbington
- * @date    2 Feb 2017 - 09:58:21
+ * @author sbebbington
+ * @date 2 Feb 2017 - 09:58:21
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function getUserIPAddress(){
-    $client     = $_SERVER['HTTP_CLIENT_IP'] ?? '';
-    $forward    = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '';
-    $ip         = $_SERVER['REMOTE_ADDR'] ?? '';
-    if(filter_var($client, FILTER_VALIDATE_IP)){
-        $ip     = $client;
-    }else if(filter_var($forward, FILTER_VALIDATE_IP)){
-        $ip     = $forward;
+function getUserIPAddress(): string
+{
+    $client = $_SERVER['HTTP_CLIENT_IP'] ?? '';
+    $forward = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '';
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+    if (filter_var($client, FILTER_VALIDATE_IP)) {
+        $ip = $client;
+    } else if (filter_var($forward, FILTER_VALIDATE_IP)) {
+        $ip = $forward;
     }
     return $ip;
 }
@@ -93,53 +96,53 @@ function getUserIPAddress(){
  * Returns the IP address that the framework
  * is running on
  *
- * @param   na
- * @author  sbebbington
- * @date    2 Jan 2018 10:48:58
+ * @author sbebbington
+ * @date 2 Jan 2018 10:48:58
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function getServerIPAddress(){
+function getServerIPAddress(): string
+{
     return $_SERVER['SERVER_ADDR'];
 }
 
 /**
  * Returns the current or default URI segment
  *
- * @param   na
- * @author  sbebbington
- * @date    6 Feb 2017 - 11:40:40
+ * @author sbebbington
+ * @date 6 Feb 2017 - 11:40:40
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function getSegment(){
-    $page    = array_filter(explode('/', $_SERVER['REQUEST_URI']), 'strlen');
-    return !empty($page) ? strtolower($page[count($page)]) : 'home';
+function getSegment(): string
+{
+    $page = array_filter(explode('/', $_SERVER['REQUEST_URI']), 'strlen');
+    return ! empty($page) ? strtolower($page[count($page)]) : 'home';
 }
 
 /**
  * Returns PHP_SELF
- * 
- * @param   na
- * @author  sbebbington
- * @date    2 Jan 2018 10:49:31
+ *
+ * @author sbebbington
+ * @date 2 Jan 2018 10:49:31
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function getSelf(){
+function getSelf(): string
+{
     return $_SERVER['PHP_SELF'];
 }
 
 /**
  * Returns the server query string
  *
- * @param   na
- * @author  sbebbington
- * @date    2 Mar 2017 - 13:23:08
+ * @author sbebbington
+ * @date 2 Mar 2017 - 13:23:08
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function getQueryString(){
+function getQueryString(): string
+{
     return str_replace("/", '', $_SERVER['QUERY_STRING']);
 }
 
@@ -147,13 +150,13 @@ function getQueryString(){
  * Returns the version number of the application
  * as set in the site.json config
  *
- * @param   na
- * @author  sbebbington
- * @date    27 Jul 2017 - 16:02:26
+ * @author sbebbington
+ * @date 27 Jul 2017 - 16:02:26
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function getSiteVersion(){
+function getSiteVersion(): string
+{
     return getConfig('version');
 }
 
@@ -161,13 +164,13 @@ function getSiteVersion(){
  * If rc is set as true in the site.json config
  * then this is a release candidate, else it isn't
  *
- * @param   na
- * @author  sbebbington
- * @date    27 Jul 2017 - 16:03:33
+ * @author sbebbington
+ * @date 27 Jul 2017 - 16:03:33
  * @version 0.1.5-RC2
- * @return  bool
+ * @return bool
  */
-function isReleaseCandidate(){
+function isReleaseCandidate(): string
+{
     return getConfig('rc');
 }
 
@@ -175,28 +178,28 @@ function isReleaseCandidate(){
  * States whether or not is a development
  * version set in the site.json config
  *
- * @param   na
- * @author  sbebbington
- * @date    27 Jul 2017 - 16:05:23
+ * @author sbebbington
+ * @date 27 Jul 2017 - 16:05:23
  * @version 0.1.5-RC2
- * @return  bool
+ * @return bool
  */
-function isDevelopmentVersion(){
+function isDevelopmentVersion(): string
+{
     return getConfig('dev');
 }
 
 /**
  * Gets the configuration path
  *
- * @param   string
- * @author  Rob Gill && sbebbington
- * @date    16 Aug 2017 - 17:09:28
+ * @author Rob Gill && sbebbington
+ * @date 16 Aug 2017 - 17:09:28
  * @version 0.1.5-RC2
- * @return  string
+ * @return string
  */
-function logErrorPath(string $routeTo = ''){
+function logErrorPath(string $routeTo = ''): string
+{
     $baseDir = serverPath("/logs");
-    return str_replace("\\","/", "{$baseDir}{$routeTo}");
+    return str_replace("\\", "/", "{$baseDir}{$routeTo}");
 }
 
 /**
@@ -205,53 +208,70 @@ function logErrorPath(string $routeTo = ''){
  * then it will append the data to the
  * file;
  *
- * @param   array | mixed
- * @author  sbebbington
- * @date    19 Oct 2018 13:38:49
+ * @param array $error
+ * @author sbebbington
+ * @date 19 Oct 2018 13:38:49
  * @version 0.1.5-RC2
- * @return  resource | false
- * @throws  Exception
+ * @return resource | false
+ * @throws Exception
  */
-function writeToLogFile($error = []){
-    if(empty($error)){
+function writeToLogFile($error = []): bool
+{
+    if (empty($error)) {
         return false;
     }
-    $error  = is_array($error) ? $error : [$error];
-    
-    $months = [1 => 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
-    
-    if(empty($error['ip_address'])){
-        $error['ip_address']    = getUserIPAddress();
+    $error = is_array($error) ? $error : [
+        $error
+    ];
+
+    $months = [
+        1 => 'jan',
+        'feb',
+        'mar',
+        'apr',
+        'may',
+        'jun',
+        'jul',
+        'aug',
+        'sep',
+        'oct',
+        'nov',
+        'dec'
+    ];
+
+    if (empty($error['ip_address'])) {
+        $error['ip_address'] = getUserIPAddress();
     }
-    
-    if(empty($error['date'])){
-        $error['date']          = date("Y-m-d");
-        $error['time']          = date("H:i:s");
+
+    if (empty($error['date'])) {
+        $error['date'] = date("Y-m-d");
+        $error['time'] = date("H:i:s");
     }
-    $fileNames  = explode("-", $error['date']);
-    $dirName    = $months[(int)$fileNames[1]];
-    $logPath    = logErrorPath("/{$dirName}");
-    $fileName   = "{$logPath}/{$fileNames[2]}.log";
-    
-    if(!is_dir(logErrorPath())){
-        if(!mkdir(logErrorPath(), 0755)){
+    $fileNames = explode("-", $error['date']);
+    $dirName = $months[(int) $fileNames[1]];
+    $logPath = logErrorPath("/{$dirName}");
+    $fileName = "{$logPath}/{$fileNames[2]}.log";
+
+    if (! is_dir(logErrorPath())) {
+        if (! mkdir(logErrorPath(), 0755)) {
             throw new Exception("Filepath " . logErrorPath() . " could not be created", 0xf17e);
         }
     }
-    
-    if(!is_dir($logPath)){
-        if(!mkdir($logPath, 0755)){
+
+    if (! is_dir($logPath)) {
+        if (! mkdir($logPath, 0755)) {
             throw new Exception("Filepath {$logPath} could not be created", 0xf17e);
         }
     }
-    $error  = json_encode($error);
-    
-    if(!file_exists($fileName)){
-        if(!file_put_contents($fileName, "")){
+    $error = json_encode($error);
+
+    if (! file_exists($fileName)) {
+        if (! file_put_contents($fileName, "")) {
             throw new Exception("File {$fileName} could not be created", 0xf17e);
         }
     }
-    return file_put_contents($fileName, $error . PHP_EOL, FILE_APPEND | LOCK_EX) ?? false;
+    file_put_contents($fileName, $error . PHP_EOL, FILE_APPEND | LOCK_EX);
+    return true;
 }
 
 /**
@@ -260,13 +280,14 @@ function writeToLogFile($error = []){
  * note that numeric values of 0 or 0.0 will
  * return as empty so this tries to negate
  * this feature as well
- * 
- * @param   scalar | object
- * @author  sbebbington
- * @date    5 Sep 2017 - 12:51:55
+ *
+ * @param mixed $value
+ * @author sbebbington
+ * @date 5 Sep 2017 - 12:51:55
  * @version 0.1.5-RC2
- * @return  bool
+ * @return bool
  */
-function isEmpty($value){
+function isEmpty($value): bool
+{
     return (is_string($value) || is_numeric($value)) ? empty($value) && strlen("{$value}") : empty($value);
 }
