@@ -8,7 +8,7 @@ require_once (serverPath('/library/Library.php'));
 class ControllerCore
 {
 
-    public $post;
+    public $get;
 
     public $view;
 
@@ -24,11 +24,11 @@ class ControllerCore
         if (! isset($_SESSION['flashMessage'])) {
             $_SESSION['flashMessage'] = array();
         }
-        if (empty($this->post) || $this->post == null) {
-            $this->post = array();
+        if (empty($this->get) || $this->get == null) {
+            $this->get = array();
         }
-        if (! empty($_POST)) {
-            $this->setPost();
+        if (! empty($_GET)) {
+            $this->setGet();
         }
         $this->view = new stdClass();
         $this->host = host();
@@ -44,10 +44,10 @@ class ControllerCore
      * @version 0.1.5-RC2
      * @return void
      */
-    public function setPost()
+    public function setGet()
     {
-        foreach ($_POST as $key => $data) {
-            $this->post[$key] = is_string($data) ? trim($data) : $data;
+        foreach ($_GET as $key => $data) {
+            $this->get[$key] = is_string($data) ? trim($data) : $data;
         }
     }
 
