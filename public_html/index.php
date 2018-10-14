@@ -102,3 +102,5 @@ function serverPath(string $routeTo = '')
 
 // Creates new instance and therefore initiates the controllers, models and views etc...
 $page = new index();
+
+unset($page);

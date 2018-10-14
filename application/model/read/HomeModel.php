@@ -19,8 +19,7 @@ class HomeModel extends ModelCore
     /**
      * Gets the generic view stuff
      *
-     * @param
-     *            string
+     * @param string $colName
      * @author sbebbington
      * @date 24 Oct 2017 15:50:08
      * @return string

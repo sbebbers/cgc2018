@@ -133,7 +133,7 @@ class ReviewsController extends ControllerCore
         }
         $tableOfContents = $this->sql->getTableOfContents($gameType);
 
-        foreach ($tableOfContents as $key => $data) {
+        foreach ($tableOfContents as $data) {
             $_data = $this->lib->convertToHtmlId($data['title']);
             $returnValues[$_data] = $data['title'];
         }

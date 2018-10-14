@@ -158,8 +158,6 @@ class Core extends HtmlBuilder
      * and will also set the page segment (in the
      * allowedSegments JSON object)
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 28 Jul 2017 11:50:03
      * @version 0.1.5-RC2
@@ -183,8 +181,6 @@ class Core extends HtmlBuilder
     /**
      * Sets up the $_GET super global
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 25 Jul 2017 09:48:12
      * @version 0.1.5-RC2
@@ -229,12 +225,13 @@ class Core extends HtmlBuilder
      * Sets the page matadata according to the
      * pagedata.json configuration file
      *
+     * @param array $pageData
      * @author sbebbington
      * @date 22 Jan 2018 09:38:02
      * @version 0.1.5-RC2
      * @return string
      */
-    public function setMetaData(array $pageData = [])
+    public function setMetaData(array $pageData = []): string
     {
         if (empty($pageData) || empty($pageData['default'])) {
             return '';
@@ -267,7 +264,7 @@ class Core extends HtmlBuilder
      * @version 0.1.5-RC2
      * @return void
      */
-    protected function checkExtension()
+    protected function checkExtension(): void
     {
         if (strpos($this->segment, ".") > 0) {
             $segments = explode(".", $this->segment);
@@ -284,15 +281,14 @@ class Core extends HtmlBuilder
      * added in error surpression to prevent warnings being
      * logged
      *
-     * @param
-     *            resource | \stdClass $insance
+     * @param mixed $insance
      * @param string $masterKey
      * @author sbebbington
      * @date 30 May 2017 09:49:39
      * @version 0.1.5-RC2
      * @return void
      */
-    public function setView($instance, string $masterKey = '')
+    public function setView($instance, string $masterKey = null): void
     {
         foreach ($instance as $key => $data) {
             if ($masterKey == '') {

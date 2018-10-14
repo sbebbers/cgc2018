@@ -106,13 +106,12 @@ class ModelCore
     private function setTables(string $db = '')
     {
         $query = "SELECT `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` " . "WHERE `TABLE_TYPE`='BASE TABLE' AND `TABLE_SCHEMA`=?;";
-        $result = $this->connection->prepare($query);
 
         $tables = $this->execute($this->connection->prepare($query), [
             $db
         ], true);
 
-        foreach ($tables as $key => $data) {
+        foreach ($tables as $data) {
             $table = $data['TABLE_NAME'];
             $this->tables->{$table} = "{$table}";
         }
@@ -165,7 +164,7 @@ class ModelCore
      * @param
      *            string, string
      * @author Shaun B
-     * @date	16 Feb 2018 10:22:23
+     * @date 16 Feb 2018 10:22:23
      * @return array
      * @throws FrameworkException
      */
