@@ -8,7 +8,15 @@ require_once (serverPath('/library/Library.php'));
 class ControllerCore
 {
 
-    public $post, $view, $lib, $sql, $host;
+    public $post;
+
+    public $view;
+
+    public $lib;
+
+    public $sql;
+
+    public $host;
 
     public function __construct()
     {
@@ -46,8 +54,6 @@ class ControllerCore
     /**
      * This should empty the super global $_POST and the controller $this->post
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 16 Jun 2016 11:25:04
      * @version 0.1.5-RC2
@@ -62,8 +68,6 @@ class ControllerCore
     /**
      * Clears PHP session cookies
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 14 Sep 2016 14:29:23
      * @version 0.1.5-RC2
@@ -80,8 +84,8 @@ class ControllerCore
     /**
      * Sets flash messages (recommend using string for value param)
      *
-     * @param
-     *            string, string | int | boolean
+     * @param string $key
+     * @param mixed $value
      * @author sbebbington
      * @date 14 Sep 2016 09:48:53
      * @version 0.1.5-RC2
@@ -96,7 +100,7 @@ class ControllerCore
      * Gets the altenating
      *
      * @author Shaun B
-     * @date	16 Feb 2018 14:35:43
+     * @date 16 Feb 2018 14:35:43
      * @return array
      */
     public function getHRClasses()

@@ -15,7 +15,7 @@ use Application\Core\FrameworkException\FrameworkException;
  * @return string
  * @throws FrameworkException
  */
-function getConfig(string $parameter = ''): string
+function getConfig(string $parameter = null): string
 {
     if (! file_exists(serverPath("/config/site.json"))) {
         throw new FrameworkException("A site.json file is required in the configuration at the application level for the framework to run", 0x02);
@@ -196,7 +196,7 @@ function isDevelopmentVersion(): string
  * @version 0.1.5-RC2
  * @return string
  */
-function logErrorPath(string $routeTo = ''): string
+function logErrorPath(string $routeTo = null): string
 {
     $baseDir = serverPath("/logs");
     return str_replace("\\", "/", "{$baseDir}{$routeTo}");
