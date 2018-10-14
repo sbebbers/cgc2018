@@ -1,7 +1,6 @@
 <?php
 use Application\Core\Framework\Core;
 use Application\Core\FrameworkException\FrameworkException;
-
 require_once (serverPath('/core/FrameworkCore.php'));
 
 header('X-Content-Type-Options: nosniff');
@@ -16,7 +15,9 @@ if (session_id() == "") {
 
 class index
 {
-
+    /**
+     * @var Core $core
+     */
     protected $core;
 
     /**
@@ -27,8 +28,6 @@ class index
      * for a list of valid timezones, see:
      * http://php.net/manual/en/timezones.php
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 19 Jan 2018 13:38:24
      * @version 0.1.5-RC2
@@ -63,8 +62,6 @@ class index
      * Check if request is for page view
      * or site asset
      *
-     * @param
-     *            na
      * @author sbebbington
      * @date 28 Jul 2017 - 17:03:54
      * @version 0.1.5-RC2
@@ -87,8 +84,7 @@ class index
  * This will correctly route to the application
  * directory on your server
  *
- * @param
- *            string
+ * @param string $routeTo
  * @author Rob Gill && sbebbington
  * @date 26 Sep 2017 09:50:01
  * @version 0.1.5-RC2
@@ -96,7 +92,7 @@ class index
  */
 function serverPath($routeTo = '')
 {
-    $baseDir = dirname(__DIR__) . "/application";
+    $baseDir = dirname(__DIR__) . "/application" ;
     return str_replace("\\", "/", "{$baseDir}{$routeTo}");
 }
 
