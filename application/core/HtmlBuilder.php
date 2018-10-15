@@ -8,7 +8,7 @@ class HtmlBuilder
 {
 
     /**
-     * @var Library
+     * @var Library $lib
      */
     public $lib;
 
