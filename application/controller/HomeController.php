@@ -29,8 +29,8 @@ class HomeController extends ControllerCore
         $this->view->header = $this->getHeader() ?? 'Crap Games Competition 2018';
         $this->view->subHeader = $this->getSubHeader() ?? 'Welcome to the 2018 Crap Games Competition';
         $this->view->content = $this->getContent();
-        $this->view->showEasterEgg = (!empty($this->get['easteregg']) && $this->get['easteregg'] == '1') ? '1' : '0';
-        if((int)rand(0, 24) === 3){
+        $this->view->showEasterEgg = (! empty($this->get['easteregg']) && $this->get['easteregg'] == '1') ? '1' : '0';
+        if (((int) rand(0, 64)) % 12 === 3) {
             $this->setFlashMessage("message", "Made you look :-P");
         }
     }

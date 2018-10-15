@@ -15,7 +15,9 @@ if (session_id() == "") {
 
 class index
 {
+
     /**
+     *
      * @var Core $core
      */
     protected $core;
@@ -92,7 +94,7 @@ class index
  */
 function serverPath($routeTo = '')
 {
-    $baseDir = dirname(__DIR__) . "/application" ;
+    $baseDir = dirname(__DIR__) . "/application";
     return str_replace("\\", "/", "{$baseDir}{$routeTo}");
 }
 
